@@ -1,0 +1,52 @@
+#ifndef _INC_RINGSDKVC6DEMO_GLOBAL
+#define _INC_RINGSDKVC6DEMO_GLOBAL
+#include "ringmain.h"
+#include "tabex.h"
+#include "resource.h"
+
+BEGIN_SETUPWINDOW(leftdlg,IS_DIALOG)
+	BINDID(IDD_LEFTDLG)	
+	BEGIN_DEFMSG
+		DEFMSG(WM_INITDIALOG)
+	END_DEFMSG(leftdlg)
+END_SETUPWINDOW(leftdlg)
+
+BEGIN_SETUPMAINWINDOW(IS_MDIFRAME)
+	BEGIN_DEF_VAR(NO_INIT)
+		RingCoolMenu* rm,*rmBtn;
+		RingMenuBar* menubar;
+		RingToolBar *toolbar,*wizbar;
+		HBRUSH m_brush;
+		RingTree* m_classTree,*m_resTree,*m_fileTree;
+		RingTab* m_tab;
+		RingEdit* m_edit;
+		RingSizeBar* m_sbFormOption;		
+	END_DEF_VAR
+
+	void UpdateToolbar(BOOL);
+
+	BEGIN_DEFMSG
+		DEFCMD(OnFileNew)
+		DEFCMD(OnFileOpen)
+		DEFCMD(OnAbout)
+		DEFCMD(OnExit)
+
+		DEFMSG(WM_CREATE)		
+		DEFMSG(WM_SYSCOMMAND)
+		DEFMSG(WM_SHOWWINDOW)
+		DEFMSG(WM_RBUTTONDOWN)
+		DEFMSG(WM_RINGTOOLHELP)
+		//DEFMSG(RINGTOOLTIP)
+		//DEFMSG(NOTIFY)
+		DEFNOTIFY(TBN_DROPDOWN)
+		DEFMSG(WM_DESTROY)		
+	END_DEFMAINMSG
+END_SETUPMAINWINDOW
+
+BEGIN_SETUPWINDOW(child,IS_MDICHILD)
+	BEGIN_DEFMSG
+		DEFMSG(WM_CREATE)
+	END_DEFMSG(child)
+END_SETUPWINDOW(child)
+
+#endif

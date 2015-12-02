@@ -1,0 +1,274 @@
+RINGSDK包含界面库和图象库。
+本项目为编译环境为VC6，需要先安装platform sdk.不断修改中，会陆续上传其他相关文档及DEMO
+
+设置：
+VC6菜单tools->Options，选择Directoris页，把include,lib目录加入到相应文件列表，如果要调试，需要把libsrc目录下的各个子目录加入到Source files文件列表中。
+
+工程依赖几个第三方库，需要先编译livsrc\free_lib下几个目录的工程，然后打开ringsdk.dsw编译。工程都已经设置好了，编译即可。
+
+由于VC的智能提示不能识别界面库里的宏，因此建议安装VA(Visual.Assist)
+
+创建基于RingSDK的工程：
+新建一个Win32 Application的工程，不要让VC写任何代码，空的工程。然后选择菜单Project->settings...，
+选择C/C++页，Category选择Code Generation，然后在Use run-time library选择：
+DEBUG选择Debug Multithreaded
+RELEASE选择MultiThreaded
+工程设置完毕，然后可以加入CPP和H文件了。
+
+类库使用：
+1、头文件：
+头文件包含"ringmain.h"就可以，如果要使用图象库，还需要包含"ringdib.h"
+
+2、窗口类声明：
+窗口定义为如下格式：
+BEGIN_SETUPWINDOW(窗口名,窗口类型)
+	BINNDID(对话框ID)				//当窗口类型是对话框才需要写这个宏，且是可选的，即不写也可以
+	BEGIN_DEF_VAR(初始化标记)
+		//这里定义类成员数据
+	END_DEF_VAR
+	
+	//这里定义类成员函数
+	
+	//定义窗口消息处理函数
+	BEGIN_DEFMSG
+      DEFMSG(消息代码)
+      DEFMSGEX(自定义消息处理函数名)
+      ...
+      DEFCMD(命令处理函数名)
+      ...
+      DEFNOTIFY(通知消息代码)
+   END_DEFMSG(窗口名)
+END_SETUPWINDOW(窗口名)
+
+这里对上面代码中的中文进行说明：
+窗口名：窗口名同时也是该窗口类的对象名，比如窗口名为MainWindow，则该窗口类名为RingWnd_MainWindow，
+        同时声明了RingWnd_MainWindow* MainWindow=NULL;
+        以后只要调用MainWindow = NewRingObj(MainWindow);然后MainWindow就可以使用了。
+        以上代码相当于：
+        class RingWnd_MainWindow
+        {
+        		...
+        }
+        RingWnd_MainWindow* MainWindow=NULL;
+        类名可以用RINGCLASS(窗口名)宏来得到
+
+窗口类型：为IS_WINDOW,IS_MDIFRAME,IS_MDICHILD,IS_DIALOG,IS_PROPPAGE,IS_PROPSHEET这几个值之一，一看名称就知道，不需要多讲了。
+          其实这个只是声明了窗口类是从哪个类继承。
+          
+初始化标记：为NEED_INIT和NO_INIT两个值之一，指定了是否需要成员数据的初始化，一般成员数据的初始化可以在WM_CREATE消息里完成，
+            如果需要事先初始化，可以指定NEED_INIT，但是需要在CPP文件实现一个INITWINDOW(窗口名)的函数，进行初始化。
+            这个BEGIN_DEF_VAR(初始化标记)和END_DEF_VAR是可选的，即可以不写这两个宏，一样可以声明成员数据或函数。
+            
+消息代码：窗口消息代码，例：WM_CREATE
+
+自定义消息处理函数名:响应自定义消息的处理函数，这个可以随便取名，例：OnCustomMessage
+
+命令处理函数名：响应菜单命令或控件命令的处理函数，这个可以随便取名，例：OnOpenFile,OnButton1Click
+
+通知消息代码:控件的通知消息代码，例：LVN_SELECTCHANGE
+
+对话框ID:当窗口类型是对话框才需要写这个宏，且是可选的，即不写也可以。写了这句，对话框创建时可以不写参数，例：
+         BEGIN_SETUPWINDOW(DlgAbout,IS_DIALOG)
+         	BINDID(IDD_ABOUT)
+         	...
+         	
+         这样创建：
+         DlgAbout = NewRingObj(DlgAbout);
+         DlgAbout->DoModal();
+         就弹出了对话框。
+         如果没有BINGID，则创建时需要写参数：DlgAbout->DoModal(MAKEINTRESOURCE(对话框ID));
+         
+3、主窗口：
+主窗口的窗口名固定为window，有且只有一个主窗口，定义时可以用另外一套宏，不用写该窗口名：
+BEGIN_SETUPMAINWINDOW(窗口类型)
+	BEGIN_DEF_VAR(初始化标记)
+		//这里定义类成员数据
+	END_DEF_VAR
+	
+	//这里定义类成员函数
+	
+	//定义窗口消息处理函数
+	BEGIN_DEFMSG
+      DEFMSG(消息代码)
+      DEFMSGEX(自定义消息处理函数名)
+      ...
+      DEFCMD(命令处理函数名)
+      ...
+      DEFNOTIFY(通知消息代码)
+   END_DEFMAINMSG
+END_SETUPMAINWINDOW
+主窗口创建后可以就调用window->成员函数()
+
+4、消息注册：
+窗口消息的处理需要注册，注册后才会调用相应的处理函数，注册的消息处理函数必须已声明过（用DEFMSG,DEFCMD等声明过），格式如下：
+BEGIN_REGMSG(窗口名)
+	REGMSG(消息代码)
+	REGMSGEX(自定义消息代码,自定义消息处理函数名)
+	...
+	REGCMD(命令代码,命令处理函数名)
+	REGCMDRANGE(命令代码起始值,命令代码终止值,命令处理函数名)
+	...
+	REGNOTIFY(通知消息代码)
+	...
+END_REGMSG
+
+这段代码应该放在CPP文件，其中的中文意思上面已经说明过了，命令代码为菜单命令或控件ID，例：CM_OPEN,IDC_BUTTON1
+主窗口的消息注册同样可以用MAIN代替而不用写窗口名，即：BEGIN_REGMAINMSG
+
+注：REGCMD和REGMSG其实有一个冲突的地方，就是WM_COMMAND,这个要看WM_COMMAND放置的次序，REGMSG(WM_COMMAND)之前的
+    REGCMD的函数会执行，之后的REGCMD的函数则会被屏蔽，不会执行到，不管WM_COMMAND消息里是否处理了这些命令。
+
+5、主函数及创建主窗口：
+界面库封装了WinMain，因此主入口函数改成了RingMain，函数原型为：
+int RingMain()
+
+必须实现该函数，在函数内创建主窗口。创建主窗口可以用以下宏：
+APP_CREATEWINDOW(窗口标题，窗口类名，窗口类型，菜单资源字符串);
+APP_CREATEWINDOWEX(窗口标题，窗口类名，窗口类型，窗口扩展类型，菜单资源字符串);
+APP_CREATEDIALOG(对话框资源字符串);
+这里的窗口类名不是C++的类，而是注册窗口时的窗口类名，以后可以调用API函数FindWindow(窗口类名，窗口标题)来查找窗口。
+同样窗口类型不是上面提到的窗口类型，而是WS_OVERLAPPEDWINDOW之类数值。
+资源字符串如果是定义了ID，需要用MAKEINTRESOURCE(ID)转换。
+
+窗口消息循环：界面库内建了一个RingApp对象，可以调用RingApp.Run()来启动消息循环。
+
+综上所述，RingMain的一般实现为：
+int RingMain()
+{
+	APP_CREATEWINDOW("RingSDK演示程序","RINGSDK_DEMO",WS_OVERLAPPEDWINDOW,MAKEINTRESOURCE(IDR_MAINMENU));
+	return RingApp.Run();
+}
+
+程序的启动参数可以用LPSTR lpszCmdLine = RingApp.GetCmdLine()来得到。
+程序实例句柄可以用GetInstance()来得到。
+
+6、窗口消息处理：
+界面库封装了窗口过程，用户注册了消息处理函数，窗口过程会自动调用这些函数，因此只需实现这些处理函数。函数原型为：
+RINGMSG(窗口名,消息代码或自定义消息处理函数名)
+如果是主窗口的窗口消息，为:
+RINGMAINMSG(消息代码或自定义消息处理函数名)
+例：RINGMAINMSG(WM_CREATE)
+这两个宏隐藏了参数，上例展开为：LRESULT RingWnd_window::On_WM_CREATE(HWND hWnd,RINGPARAMS& param)
+RINGPARAMS的结构定义为：
+typedef struct tagRingParams
+{	
+	UINT uMsg;				//窗口消息
+	union
+	{
+		struct 
+		{
+			WORD low;		//wParam
+			WORD high;		//wParam
+		}shortval;			//wParam
+		HDC hdc;				//wParam
+		HRGN hrgn;			//WM_NCPAINT,etc.
+		WPARAM wParam;
+	};
+	union
+	{
+		LPCREATESTRUCT lpcreate;				//WM_CREATE(lParam)
+		LPNMHDR lpnmhdr;							//WM_NOTIFY(lParam)
+		LPROPVNOTIFY lpropvnm;					//for OptionView NOTIFY(lParam)
+		LPWINDOWPOS lpwindowpos;				//WM_WINDOWPOSXXX(lParam)
+		LPDRAWITEMSTRUCT lpdrawitem;			//WM_DRAWITEM(lParam)
+		LPMEASUREITEMSTRUCT lpmeasureitem;	//WM_MEASUREITEM(lParam)
+		LPNCCALCSIZE_PARAMS lpncsp;			//WM_NCCALCSIZE(lParam)
+		LPDELETEITEMSTRUCT lpdeleteitem;		//WM_DELETEITEM(lParam)
+		LPNMTREEVIEW lpnmtreeview;				//WM_NOTIFY(lParam-treeview)
+		LPNMLISTVIEW lpnmlistview;				//WM_NOTIFY(lParam-listview)
+		POINTS mousept;							//鼠标消息(lParam)		
+		HANDLE handle;								//(lParam)
+		DWORD dwval;								//(lParam)
+		int intval;									//(lParam)
+		LPARAM lParam;
+	};
+}RINGPARAMS,*LPRINGPARAMS;
+
+因此可以在函数内部使用param来访问消息参数，例：
+RINGMAINMSG(WM_CREATE)
+{
+   if(param.lpcreate->lpCreateParams)
+   	...
+   return 0;
+   //return DefaultProc(param);  //如果需要可以调用系统默认处理函数
+}
+
+7、窗口类对象指针的有效性判断及获取：
+可以根据窗口句柄获取窗口对象指针：
+RingWnd* pwnd = (RingWnd*)GetWindowPtr(hWnd);
+
+判断窗口对象指针是否有效（对象已创建且已创建窗口）：
+BOOL bIsValid = IswindowPtr(pwnd);
+
+8、创建子窗口：
+子窗口类声明并注册完消息后，可以用NewRingObj来产生对象，如定义了窗口类ChildWin，这样创建：
+ChildWin = NewRingObj(ChildWin);
+ChildWin->Create(窗口标题，窗口类名，窗口类型，窗口扩展类型，x,y,width,height,父窗口句柄，菜单句柄，LPARAM);
+从窗口扩展类型参数开始，后面的参数都有默认值，可以不写。
+
+NewRingObj为产生窗口类对象，函数原型为：
+template<typename tname>
+tname* NewRingObj(tname* obj,BOOL bAutoDelete=FALSE);
+最后一个参数表示该窗口类对象是否自动析构，如果为TRUE，则创建的窗口关闭时该对象自动析构。
+控件类对象均自动析构，该参数被忽略。
+自定义的窗口类默认是手工销毁，也可以在窗口创建后调用SetAutoDelete(TRUE)来指定自动析构。
+窗口类手工销毁请调用DelRingObj(窗口类对象)，即：
+ChildWin = NewRingObj(ChildWin);
+ChildWin->Create(...);
+窗口关闭后：
+DelRingObj(ChildWin);
+之后ChildWin的值为NULL。
+未创建窗口的对象不会自动析构。
+
+NewRingObj产生的窗口类对象的父窗口取决于调用该函数的窗口对象，比如你在主窗口对象内部调用：
+RINGMAINMSG(WM_CREATE)
+{
+	ChildWin = NewRingObj(ChildWin);
+	...
+}
+则ChildWin的父窗口为主窗口。也可以用SetParentObj(窗口对象)来设置父窗口对象，之后调用Create如果参数中
+未指定父窗口对象句柄，则使用父窗口对象的窗口句柄。因此一个窗口类的父窗口对象和父窗口可以不同。
+
+创建MDI子窗口：
+需要父窗口是MDIFRAME，即定义时：BEGIN_SETUPMAINWINDOW(IS_MDIFRAME)
+子窗口是MDIChild：BEGIN_SETUPWINDOW(MDIChild,IS_MDICHILD)
+创建：CreateChild(窗口标题,NewRingObj(MDIChild),打开/新建标记,WS_OVERLAPPEDWINDOW);
+打开/新建标记如果是TRUE，表示是打开的文档，FALSE是新建的文档，会在窗口标题后面加一个数字，如："新文档1"
+子窗口对象指针可以给所有子窗口对象共用，并不特指某一个子窗口，比如你可以连续调用CreateChild:
+CreateChild("新文档",NewRingObj(MDIChild),FALSE,WS_OVERLAPPEDWINDOW);
+CreateChild("新文档",NewRingObj(MDIChild),FALSE,WS_OVERLAPPEDWINDOW);
+CreateChild("新文档",NewRingObj(MDIChild),FALSE,WS_OVERLAPPEDWINDOW);
+新建了3个MDI子窗口，这时MDIChild仍然为NULL，因为没赋值，这时可以用：
+MDIChild = GetCurrChild();获取当前活动的子窗口进行操作。
+也可以FindWindow找到特定窗口的HWND，然后MDIChild = (RINGCLASS(MDIChild)*)GetWindowPtr();
+
+
+创建对话框：
+前面已经提到过了，例：
+DlgAbout = NewRingObj(DlgAbout);
+DlgAbout->DoModal();		//模态对话框
+DelRingObj(DlgAbout);	//销毁
+
+DlgAbout = NewRingObj(DlgAbout,TRUE);  //设定关闭时自动销毁对象
+DlgAbout->Create();							//非模态对话框
+
+创建或获取控件：
+这个一般是在对话框的WM_INITDIALOG消息里处理
+动态创建同子窗口：
+RingEdit* edit = NewRingObj(itemof(RingEdit));	//控件调用该函数第一个参数请使用itemof(控件类名)宏
+edit->Create(...);	//控件类是自动销毁的
+
+获取控件（即子类化）：
+指针：RingEdit* edit = GetItem(itemof(RingEdit),控件ID);
+
+直接产生的对象，这个因为有作用域问题，应该声明为类成员数据。
+RingEdit edit;
+AssignItem(edit,控件ID);
+之后edit就可以使用了。
+
+9、窗口类之间的互相访问：
+因为窗口类声明时就产生了一个类对象指针，因此可以用这个指针来访问其他窗口，比如弹出了一个对话框，在这个对话框内部：
+可以调用window->somefunction来调用或访问主窗口的函数或数据。
+可以通过类似MDIChild或其他有效的窗口名来访问其他窗口类的数据或调用函数。
+
+这里是一个总的说明，要加深认识还是应该看代码，example\tutorial里面循序渐进演示了一个类似ACDSEE的图片浏览器，可以看一下。

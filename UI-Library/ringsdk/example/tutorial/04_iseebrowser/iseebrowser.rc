@@ -1,0 +1,167 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)\tCtrl+O",            CM_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    CM_EXIT
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "层叠窗口(&C)",                CM_CASCADE
+        MENUITEM "垂直平铺(V)",                 CM_TILEV
+        MENUITEM "水平平铺(&H)",                CM_TILEH
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于...",                     CM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APP                 ICON    DISCARDABLE     "..\\res\\icon1.ico"
+IDI_ISEE                ICON    DISCARDABLE     "..\\res\\isee.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "..\\res\\toolbar.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "..\\res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "O",            CM_OPEN,                VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 293, 182
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "关 闭",IDOK,229,162,50,14
+    CONTROL         106,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN,3,4,51,174,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,58,1,229,62
+    ICON            IDI_ISEE,IDC_STATIC,76,19,20,20,SS_SUNKEN,
+                    WS_EX_STATICEDGE
+    LTEXT           "ISee \n\n图象浏览器 演示版本",IDC_STATIC,112,18,81,32
+    LTEXT           "",IDC_STATIC,58,68,226,43,NOT WS_GROUP,
+                    WS_EX_DLGMODALFRAME | WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,61,67,220,41
+    LTEXT           "作者：临风\n\nE-Mail:ringphone@sina.com",IDC_STATIC,77,
+                    76,187,27
+    LTEXT           "说明：本程序为RingSDK界面库的演示程序\n\n",IDC_STATIC,
+                    61,121,223,32
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CM_ABOUT                "显示系统及版权信息"
+    CM_CASCADE              "层叠子窗口"
+    CM_OPEN                 "打开图象文件"
+    CM_EXIT                 "退出程序"
+    CM_TILEV                "纵向平铺子窗口"
+    CM_TILEH                "横向平铺子窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    4352                    "文件操作"
+    4353                    "子窗口操作"
+    4354                    "帮助"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

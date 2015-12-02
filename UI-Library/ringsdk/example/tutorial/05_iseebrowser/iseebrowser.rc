@@ -1,0 +1,359 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        POPUP "新建..."
+        BEGIN
+            MENUITEM "窗口\tCTRL+N",                CM_NEWWINDOW
+            MENUITEM SEPARATOR
+            MENUITEM "文件夹",                      CM_NEWFOLDER
+            MENUITEM "相册",                        CM_NEWALBUM
+            MENUITEM "快捷方式...",                 CM_SHELLSHORTCUT
+        END
+        MENUITEM "保存到相册...",               CM_SAVETOALBUM
+        MENUITEM "添加到收藏夹...",             CM_ADDFAV
+        MENUITEM SEPARATOR
+        MENUITEM "打开(&O)\tCtrl+O",            CM_OPEN
+        POPUP "系统功能"
+        BEGIN
+            MENUITEM "打开\tShift+L",               CM_SHELLOPEN
+            MENUITEM "编辑\tShift+E",               CM_SHELLEDIT
+            MENUITEM SEPARATOR
+            MENUITEM "打开方式...",                 CM_SHELLOPENWITH
+            MENUITEM "编辑方式...",                 CM_SHELLEDITWITH
+        END
+        MENUITEM SEPARATOR
+        POPUP "获取图象"
+        BEGIN
+            POPUP "TWAIN"
+            BEGIN
+                MENUITEM "捕获...\tALT+A",              ID_MENUITEM40020
+                MENUITEM SEPARATOR
+                MENUITEM "设置...\tALT+SHIFT+A",        CM_CAPTWAIN
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "打印图象...\tCtrl+P",         CM_PRINT
+        MENUITEM "打印设置...",                 CM_PRINTSETUP
+        MENUITEM SEPARATOR
+        MENUITEM "改变时间戳...\tCtrl+T",       CM_EDITTIMESTAMP
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)\tAlt+X",             CM_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "剪切\tCtrl+X",                CM_CUT
+        MENUITEM "复制\tCtrl+C",                CM_COPY
+        MENUITEM "复制图象\tCtrl+Shift+C",      CM_COPYIMAGE
+        MENUITEM "粘贴\tCtrl+V",                CM_PASTE
+        MENUITEM "删除\tDEL",                   CM_DELETE, HELP
+        MENUITEM SEPARATOR
+        MENUITEM "复制到...\tAlt+C",            CM_COPYTO
+        MENUITEM "移动到...\tAlt+M",            CM_MOVETO
+        MENUITEM "重命名\tF2",                  CM_RENAME
+        MENUITEM "批量重命名...\tAlt+R",        CM_BATCHRENAME
+        MENUITEM SEPARATOR
+        MENUITEM "搜索\tF3",                    CM_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "取消选择\tCtrl+Shift+D",      CM_SELNONE
+        MENUITEM "选择全部\tCtrl+A",            CM_SELALL
+        MENUITEM "选择全部文件\tCtrl+Shift+A",  CM_SELALLFILE
+        MENUITEM "反向选择\tCtrl+Shift+I",      CM_SELINV
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏\tCtrl+Shift+T",        CM_TOOLBAR, CHECKED
+        MENUITEM "状态栏\tCtrl+Shift+B",        CM_STATUSBAR, CHECKED
+        MENUITEM "导航栏\tCtrl+Shift+N",        CM_NAVBAR, CHECKED
+        MENUITEM "预览窗口\tCtrl+Shift+P",      CM_PREVWINDOW, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "全屏",                        CM_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "模式"
+        BEGIN
+            MENUITEM "缩略图+详细资料\tF7",         CM_VIEWTD
+            MENUITEM "缩略图\tF8",                  CM_VIEWD
+            MENUITEM "大图标\tF9",                  CM_VIEWBIGICON
+            MENUITEM "小图标\tF10",                 CM_VIEWSMALLICON
+            MENUITEM "列表\tF11",                   CM_VIEWLIST
+            MENUITEM "详细资料\tF12",               CM_VIEWDETAIL, CHECKED
+        END
+        POPUP "过滤器"
+        BEGIN
+            MENUITEM "文件夹",                      CM_SHOWFOLDER, CHECKED
+            MENUITEM "相册文件",                    CM_SHOWALBUM
+            MENUITEM "图象文件",                    CM_SHOWPIC, CHECKED
+            MENUITEM "多媒体文件",                  CM_SHOWMEDIA
+            MENUITEM "其他文件",                    CM_SHOWOTHER
+            MENUITEM SEPARATOR
+            MENUITEM "隐藏文件",                    CM_SHOWHIDDEN
+        END
+        POPUP "选择列"
+        BEGIN
+            MENUITEM "大小",                        CM_COLSIZE, CHECKED
+            MENUITEM "类型",                        CM_COLTYPE, CHECKED
+            MENUITEM "修改时间",                    CM_COLTIME, CHECKED
+        END
+        POPUP "排序"
+        BEGIN
+            MENUITEM "扩展名",                      CM_SORTEXT
+            MENUITEM "名称",                        CM_SORTNAME, CHECKED
+            MENUITEM "尺寸",                        CM_SORTSIZE
+            MENUITEM "类型",                        CM_SORTTYPE
+            MENUITEM "修改时间",                    CM_SORTTIME
+            MENUITEM SEPARATOR
+            MENUITEM "升序",                        CM_SORTASEC, CHECKED
+            MENUITEM "降序",                        CM_SORTDESC
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "刷新\tF5",                    CM_REFRESH
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "幻灯片放映...\tCrl+S",        CM_SLIDESHOW
+        MENUITEM SEPARATOR
+        MENUITEM "旋转",                        CM_ROTATE
+        MENUITEM "调整尺寸",                    CM_RESIZE
+        MENUITEM "亮度对比度调整",              CM_ADJUSTHSL
+        MENUITEM SEPARATOR
+        POPUP "壁纸"
+        BEGIN
+            MENUITEM "居中显示\tCtrl+W",            CM_WPCENTER
+            MENUITEM "平铺显示\tCtrl+Shift+W",      CM_WPTILE
+            MENUITEM "拉伸显示\tAlt+W",             CM_WPSTRETCH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "设置\tAlt+O",                 CM_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于...",                     CM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APP                 ICON    DISCARDABLE     "..\\res\\icon1.ico"
+IDI_ISEE                ICON    DISCARDABLE     "..\\res\\isee.ico"
+IDI_COLMARKUP           ICON    DISCARDABLE     "..\\res\\ico00001.ico"
+IDI_COLMARKDOWN         ICON    DISCARDABLE     "..\\res\\colmarkd.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "..\\res\\toolbar.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "..\\res\\logo.bmp"
+IDB_ABOUT               BITMAP  DISCARDABLE     "..\\res\\about.bmp"
+IDB_BKG                 BITMAP  DISCARDABLE     "..\\res\\bkg1.BMP"
+IDB_VIEWTOOL            BITMAP  DISCARDABLE     "..\\res\\viewtooll.bmp"
+IDB_NAVTOOL             BITMAP  DISCARDABLE     "..\\res\\254.bmp"
+IDB_THUMBBKG            BITMAP  DISCARDABLE     "..\\res\\thumbbkg.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "O",            CM_OPEN,                VIRTKEY, CONTROL, NOINVERT
+    "X",            CM_EXIT,                VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 49, 33
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 9, "宋体"
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_GRAB                CURSOR  DISCARDABLE     "..\\res\\grab.cur"
+IDC_MOVEHAND            CURSOR  DISCARDABLE     "..\\res\\hand.cur"
+IDC_ZOOMGLASS           CURSOR  DISCARDABLE     "..\\res\\zoom.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CM_ABOUT                "显示系统及版权信息"
+    CM_CASCADE              "层叠子窗口"
+    CM_OPEN                 "打开图象文件"
+    CM_EXIT                 "退出程序"
+    CM_TILEV                "纵向平铺子窗口"
+    CM_TILEH                "横向平铺子窗口"
+    CM_NEWWINDOW            "新建浏览器窗口"
+    CM_NEWFOLDER            "在当前目录下新建文件夹"
+    CM_NEWALBUM             "在当前目录下新建相册"
+    CM_SAVETOALBUM          "将选择的图片保存到相册"
+    CM_ADDFAV               "将选择的图片添加到收藏夹"
+    CM_SHELLOPEN            "用系统关联程序打开选择的文件"
+    CM_SHELLEDIT            "用系统关联编辑程序编辑选择的文件"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    4352                    "文件操作"
+    4353                    "子窗口操作"
+    4354                    "帮助"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CM_SHELLOPENWITH        "设置该类型文件的打开方式"
+    CM_SHELLEDITWITH        "设置该类型文件的编辑方式"
+    CM_SHELLSHORTCUT        "新建快捷方式"
+    ID_MENUITEM40020        "从TWAIN接口捕获图象"
+    CM_CAPTWAIN             "设置"
+    CM_PRINT                "打印图象"
+    CM_PRINTSETUP           "打印设置"
+    CM_EDITTIMESTAMP        "改变选择的文件的修改时间"
+    CM_CUT                  "剪切"
+    CM_COPY                 "复制"
+    CM_COPYIMAGE            "将图象内容复制到剪贴板"
+    CM_PASTE                "粘贴文件"
+    CM_DELETE               "删除指定的文件"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CM_COPYTO               "将选择的文件复制到指定位置"
+    CM_MOVETO               "将选择的文件移动到指定位置"
+    CM_RENAME               "重命名选择的文件"
+    CM_BATCHRENAME          "批量重命名文件"
+    CM_SEARCH               "搜索文件"
+    ID_MENUITEM40037        "取消选择的文件及文件夹"
+    CM_SELNONE              "取消选择文件及文件夹"
+    ID_MENUITEM40039        "选择全部文件及文件夹"
+    CM_SELALL               "选择全部文件及文件夹"
+    CM_SELALLFILE           "选择全部文件，不包括文件夹"
+    CM_SELINV               "反向选择文件及文件夹"
+    CM_TOOLBAR              "切换工具栏"
+    CM_STATUSBAR            "切换状态栏"
+    CM_NAVBAR               "切换导航栏"
+    CM_PREVWINDOW           "切换预览窗口"
+    CM_FULLSCREEN           "全屏显示视图"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CM_VIEWTD               "以缩略图及详细资料方式显示项目"
+    CM_VIEWD                "以缩略图方式显示项目"
+    CM_VIEWBIGICON          "以大图标显示项目"
+    CM_VIEWSMALLICON        "以小图标显示项目"
+    CM_VIEWLIST             "以列表方式显示项目"
+    CM_VIEWDETAIL           "以详细资料方式显示项目"
+    CM_SHOWFOLDER           "显示文件夹"
+    CM_SHOWALBUM            "显示相册文件"
+    CM_SHOWPIC              "显示图象文件"
+    CM_SHOWMEDIA            "显示音视频等多媒体文件"
+    CM_SHOWOTHER            "显示其他文件"
+    CM_SHOWHIDDEN           "显示隐藏文件"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    CM_COLSIZE              "显示文件尺寸"
+    CM_COLTYPE              "显示文件类型"
+    CM_COLTIME              "显示文件修改时间"
+    CM_REFRESH              "刷新文件列表"
+    CM_SLIDESHOW            "幻灯片方式显示图象"
+    CM_ROTATE               "旋转图片"
+    CM_RESIZE               "调整图片尺寸"
+    CM_ADJUSTHSL            "调整图片亮度及对比度"
+    CM_WPCENTER             "居中显示壁纸"
+    CM_WPTILE               "平铺显示壁纸"
+    CM_WPSTRETCH            "拉伸显示壁纸"
+    CM_OPTION               "程序设置"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

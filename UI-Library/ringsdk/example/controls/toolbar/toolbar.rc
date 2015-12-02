@@ -1,0 +1,209 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建...\t\t\tCtrl+N",         CM_NEW
+        MENUITEM "打开...\t\t\tCtrl+O",         CM_OPEN
+        MENUITEM "关闭",                        CM_CLOSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "保存\t\t\tCtrl+S",            CM_SAVE, GRAYED
+        MENUITEM "另寸为...",                   ID_MENUITEM40048, GRAYED
+        MENUITEM "全部保存",                    CM_SAVEALL, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "页面设置...",                 ID_MENUITEM40050, GRAYED
+        MENUITEM "打印...\t\t\tCtrl+P",         CM_PRINT, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        CM_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消\t\t\tCtrl+Z",            CM_UNDO, GRAYED
+        MENUITEM "恢复\t\t\tCtrl+Y",            CM_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "剪切\t\t\tCtrl+X",            CM_CUT, GRAYED
+        MENUITEM "复制\t\t\tCtrl+C",            CM_COPY, GRAYED
+        MENUITEM "粘贴\t\t\tCtrl+V",            CM_PASTE, GRAYED
+        MENUITEM "删除\t\t\t     Del",          CM_DELETE, GRAYED
+    END
+    POPUP "工具栏(&T)"
+    BEGIN
+        MENUITEM "普通按钮",                    CM_BTN
+        MENUITEM "扁平按钮",                    CM_FLAT
+        MENUITEM "固定",                        CM_NONE
+        MENUITEM "任意停靠",                    CM_DOCKABLE
+        MENUITEM "上下停靠",                    CM_DOCKH
+        MENUITEM "左右停靠",                    CM_DOCKV
+        MENUITEM SEPARATOR
+        MENUITEM "自定义...",                   CM_CUSTOM
+        MENUITEM "设置...",                     CM_SETUP
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "下一个",                      CM_NEXT
+        MENUITEM "上一个",                      CM_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "层叠",                        CM_CASCADE
+        MENUITEM "横向平铺",                    CM_TILEH
+        MENUITEM "纵向平铺",                    CM_TILEV
+        MENUITEM SEPARATOR
+        MENUITEM "关闭",                        CM_CLOSEWINDOW, GRAYED
+        MENUITEM "关闭全部",                    CM_CLOSEALL, GRAYED
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于",                        CM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "res\\_actvex.ico"
+IDI_OPEN                ICON    DISCARDABLE     "res\\open.ico"
+IDI_NEW                 ICON    DISCARDABLE     "res\\LaST (Cobalt) V1 Icon 65.ico"
+IDI_SAVE                ICON    DISCARDABLE     "res\\LaST (Cobalt) V1 Icon 47.ico"
+IDI_EXIT                ICON    DISCARDABLE     "res\\LaST (Cobalt) V1 Icon 20.ico"
+IDI_HELP                ICON    DISCARDABLE     "res\\LaST (Cobalt) V1 Icon 16.ico"
+IDI_SAVEALL             ICON    DISCARDABLE     "res\\LaST (Cobalt) V1 Icon 46.ico"
+IDI_PRINT               ICON    DISCARDABLE     "res\\LaST (Cobalt) V1 Icon 37.ico"
+IDI_REDO                ICON    DISCARDABLE     "res\\redo.ico"
+IDI_UNDO                ICON    DISCARDABLE     "res\\undo.ico"
+IDI_CUT                 ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_DEL                 ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_PASTE               ICON    DISCARDABLE     "res\\paste.ico"
+IDI_COPY                ICON    DISCARDABLE     "res\\copy.ico"
+IDI_CLOSE               ICON    DISCARDABLE     "res\\character1.ico"
+IDI_NEXT                ICON    DISCARDABLE     "res\\ico4103.ico"
+IDI_PREV                ICON    DISCARDABLE     "res\\ico00005.ico"
+IDI_CASCADE             ICON    DISCARDABLE     "res\\ico00006.ico"
+IDI_TILEH               ICON    DISCARDABLE     "res\\tileh.ico"
+IDI_TILEV               ICON    DISCARDABLE     "res\\tilev.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BKG                 BITMAP  DISCARDABLE     "res\\bkg.bmp"
+IDB_TOOL                BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_COOL                BITMAP  DISCARDABLE     "res\\shhothi.bmp"
+IDC_DEFTOOLBAR          BITMAP  DISCARDABLE     "res\\TOOLBAR.BMP"
+IDB_NET                 BITMAP  DISCARDABLE     "res\\buildbar.bmp"
+IDB_COOLGRAY            BITMAP  DISCARDABLE     "res\\shhothi_gray.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DOCKDLG DIALOG DISCARDABLE  0, 0, 93, 132
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "停靠工具栏\n这是对话框",IDC_TEXT,45,5,42,21
+    ICON            IDI_MAIN,IDC_ICON1,3,5,20,20,SS_REALSIZEIMAGE
+    LISTBOX         IDC_LIST1,2,44,88,86,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDC_DEFTOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      CM_UNDO
+    SEPARATOR
+    BUTTON      CM_CUT
+    BUTTON      CM_COPY
+    BUTTON      CM_PASTE
+    SEPARATOR
+    BUTTON      CM_ALEFT
+    BUTTON      CM_ACENTER
+    BUTTON      CM_ARIGHT
+    SEPARATOR
+    BUTTON      CM_BOLD
+    BUTTON      CM_ITALIC
+    BUTTON      CM_UNDERLINE
+    BUTTON      CM_STRIKE
+    SEPARATOR
+    BUTTON      CM_ABOUT
+    BUTTON      CM_HELP
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

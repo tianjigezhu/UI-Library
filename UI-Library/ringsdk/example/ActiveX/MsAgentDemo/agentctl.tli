@@ -1,0 +1,1376 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (18468f35).
+//
+// e:\ringsdk\ringsdk\example\activex\msagentdemo\debug\agentctl.tli
+//
+// Wrapper implementations for Win32 type library C:\WINNT.0\msagent\agentctl.dll
+// compiler-generated file created 09/15/06 at 00:48:04 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IAgentCtlCharacters wrapper method implementations
+//
+
+inline IAgentCtlCharacterExPtr IAgentCtlCharacters::GetItem ( _bstr_t CharacterID ) {
+    struct IAgentCtlCharacterEx * _result;
+    HRESULT _hr = get_Item(CharacterID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCharacterExPtr(_result, false);
+}
+
+inline IAgentCtlCharacterExPtr IAgentCtlCharacters::Character ( _bstr_t CharacterID ) {
+    struct IAgentCtlCharacterEx * _result;
+    HRESULT _hr = raw_Character(CharacterID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCharacterExPtr(_result, false);
+}
+
+inline IUnknownPtr IAgentCtlCharacters::GetEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_Enum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline HRESULT IAgentCtlCharacters::Unload ( _bstr_t CharacterID ) {
+    HRESULT _hr = raw_Unload(CharacterID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacters::Load ( _bstr_t CharacterID, const _variant_t & LoadKey ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Load(CharacterID, LoadKey, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+//
+// interface IAgentCtlCharacter wrapper method implementations
+//
+
+inline IAgentCtlBalloonExPtr IAgentCtlCharacter::GetBalloon ( ) {
+    struct IAgentCtlBalloonEx * _result;
+    HRESULT _hr = get_Balloon(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlBalloonExPtr(_result, false);
+}
+
+inline IAgentCtlCommandsExPtr IAgentCtlCharacter::GetCommands ( ) {
+    struct IAgentCtlCommandsEx * _result;
+    HRESULT _hr = get_Commands(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCommandsExPtr(_result, false);
+}
+
+inline _bstr_t IAgentCtlCharacter::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IAgentCtlCharacter::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IAgentCtlCharacter::GetVisible ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutLeft ( short Left ) {
+    HRESULT _hr = put_Left(Left);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAgentCtlCharacter::GetLeft ( ) {
+    short _result;
+    HRESULT _hr = get_Left(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutTop ( short Top ) {
+    HRESULT _hr = put_Top(Top);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAgentCtlCharacter::GetTop ( ) {
+    short _result;
+    HRESULT _hr = get_Top(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutHeight ( short Height ) {
+    HRESULT _hr = put_Height(Height);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAgentCtlCharacter::GetHeight ( ) {
+    short _result;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutWidth ( short Width ) {
+    HRESULT _hr = put_Width(Width);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAgentCtlCharacter::GetWidth ( ) {
+    short _result;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlCharacter::GetSpeed ( ) {
+    long _result;
+    HRESULT _hr = get_Speed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlCharacter::GetPitch ( ) {
+    long _result;
+    HRESULT _hr = get_Pitch(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutIdleOn ( VARIANT_BOOL On ) {
+    HRESULT _hr = put_IdleOn(On);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCharacter::GetIdleOn ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IdleOn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlCharacter::Activate ( const _variant_t & State ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_Activate(State, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Play ( _bstr_t Animation ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Play(Animation, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Get ( _bstr_t Type, _bstr_t Name, const _variant_t & Queue ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Get(Type, Name, Queue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline HRESULT IAgentCtlCharacter::Stop ( const _variant_t & Request ) {
+    HRESULT _hr = raw_Stop(Request);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Wait ( IDispatch * WaitForRequest ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Wait(WaitForRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Interrupt ( IDispatch * InterruptRequest ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Interrupt(InterruptRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Speak ( const _variant_t & Text, const _variant_t & Url ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Speak(Text, Url, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::GestureAt ( short x, short y ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_GestureAt(x, y, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::MoveTo ( short x, short y, const _variant_t & Speed ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_MoveTo(x, y, Speed, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Hide ( const _variant_t & Fast ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Hide(Fast, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacter::Show ( const _variant_t & Fast ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Show(Fast, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline HRESULT IAgentCtlCharacter::StopAll ( const _variant_t & Types ) {
+    HRESULT _hr = raw_StopAll(Types);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline short IAgentCtlCharacter::GetMoveCause ( ) {
+    short _result;
+    HRESULT _hr = get_MoveCause(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlCharacter::GetVisibilityCause ( ) {
+    short _result;
+    HRESULT _hr = get_VisibilityCause(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlCharacter::GetHasOtherClients ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_HasOtherClients(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutSoundEffectsOn ( VARIANT_BOOL On ) {
+    HRESULT _hr = put_SoundEffectsOn(On);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCharacter::GetSoundEffectsOn ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_SoundEffectsOn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacter::PutName ( _bstr_t Name ) {
+    HRESULT _hr = put_Name(Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IAgentCtlCharacter::PutDescription ( _bstr_t Description ) {
+    HRESULT _hr = put_Description(Description);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCharacter::GetExtraData ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ExtraData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IAgentCtlCharacterEx wrapper method implementations
+//
+
+inline VARIANT_BOOL IAgentCtlCharacterEx::ShowPopupMenu ( short x, short y ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_ShowPopupMenu(x, y, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacterEx::PutAutoPopupMenu ( VARIANT_BOOL On ) {
+    HRESULT _hr = put_AutoPopupMenu(On);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCharacterEx::GetAutoPopupMenu ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_AutoPopupMenu(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacterEx::PutHelpModeOn ( VARIANT_BOOL On ) {
+    HRESULT _hr = put_HelpModeOn(On);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCharacterEx::GetHelpModeOn ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_HelpModeOn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacterEx::PutHelpContextID ( long ID ) {
+    HRESULT _hr = put_HelpContextID(ID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAgentCtlCharacterEx::GetHelpContextID ( ) {
+    long _result;
+    HRESULT _hr = get_HelpContextID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlCharacterEx::GetActive ( ) {
+    short _result;
+    HRESULT _hr = get_Active(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlCharacterEx::Listen ( VARIANT_BOOL Listen ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_Listen(Listen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCharacterEx::PutLanguageID ( long LanguageID ) {
+    HRESULT _hr = put_LanguageID(LanguageID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAgentCtlCharacterEx::GetLanguageID ( ) {
+    long _result;
+    HRESULT _hr = get_LanguageID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlCharacterEx::GetSRModeID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SRModeID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCharacterEx::PutSRModeID ( _bstr_t EngineModeId ) {
+    HRESULT _hr = put_SRModeID(EngineModeId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCharacterEx::GetTTSModeID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_TTSModeID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCharacterEx::PutTTSModeID ( _bstr_t EngineModeId ) {
+    HRESULT _hr = put_TTSModeID(EngineModeId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCharacterEx::GetHelpFile ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HelpFile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCharacterEx::PutHelpFile ( _bstr_t File ) {
+    HRESULT _hr = put_HelpFile(File);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCharacterEx::GetGUID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_GUID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline short IAgentCtlCharacterEx::GetOriginalHeight ( ) {
+    short _result;
+    HRESULT _hr = get_OriginalHeight(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlCharacterEx::GetOriginalWidth ( ) {
+    short _result;
+    HRESULT _hr = get_OriginalWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IAgentCtlRequestPtr IAgentCtlCharacterEx::Think ( _bstr_t Text ) {
+    struct IAgentCtlRequest * _result;
+    HRESULT _hr = raw_Think(Text, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlRequestPtr(_result, false);
+}
+
+inline _bstr_t IAgentCtlCharacterEx::GetVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IAgentCtlAnimationNamesPtr IAgentCtlCharacterEx::GetAnimationNames ( ) {
+    struct IAgentCtlAnimationNames * _result;
+    HRESULT _hr = get_AnimationNames(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlAnimationNamesPtr(_result, false);
+}
+
+inline long IAgentCtlCharacterEx::GetSRStatus ( ) {
+    long _result;
+    HRESULT _hr = get_SRStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlBalloon wrapper method implementations
+//
+
+inline VARIANT_BOOL IAgentCtlBalloon::GetEnabled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Enabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlBalloon::GetNumberOfLines ( ) {
+    long _result;
+    HRESULT _hr = get_NumberOfLines(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlBalloon::GetCharsPerLine ( ) {
+    long _result;
+    HRESULT _hr = get_CharsPerLine(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlBalloon::GetFontName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FontName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAgentCtlBalloon::GetFontSize ( ) {
+    long _result;
+    HRESULT _hr = get_FontSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlBalloon::GetFontBold ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_FontBold(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlBalloon::GetFontItalic ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_FontItalic(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlBalloon::GetFontStrikethru ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_FontStrikethru(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlBalloon::GetFontUnderline ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_FontUnderline(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlBalloon::GetForeColor ( ) {
+    long _result;
+    HRESULT _hr = get_ForeColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlBalloon::GetBackColor ( ) {
+    long _result;
+    HRESULT _hr = get_BackColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlBalloon::GetBorderColor ( ) {
+    long _result;
+    HRESULT _hr = get_BorderColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlBalloon::PutVisible ( VARIANT_BOOL Visible ) {
+    HRESULT _hr = put_Visible(Visible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlBalloon::GetVisible ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlBalloon::PutFontName ( _bstr_t FontName ) {
+    HRESULT _hr = put_FontName(FontName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IAgentCtlBalloon::PutFontSize ( long FontSize ) {
+    HRESULT _hr = put_FontSize(FontSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IAgentCtlBalloon::PutFontCharSet ( short FontCharSet ) {
+    HRESULT _hr = put_FontCharSet(FontCharSet);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAgentCtlBalloon::GetFontCharSet ( ) {
+    short _result;
+    HRESULT _hr = get_FontCharSet(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlBalloonEx wrapper method implementations
+//
+
+inline void IAgentCtlBalloonEx::PutStyle ( long Style ) {
+    HRESULT _hr = put_Style(Style);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAgentCtlBalloonEx::GetStyle ( ) {
+    long _result;
+    HRESULT _hr = get_Style(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlCommands wrapper method implementations
+//
+
+inline IAgentCtlCommandExPtr IAgentCtlCommands::GetItem ( _bstr_t Name ) {
+    struct IAgentCtlCommandEx * _result;
+    HRESULT _hr = get_Item(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCommandExPtr(_result, false);
+}
+
+inline IAgentCtlCommandExPtr IAgentCtlCommands::Command ( _bstr_t Name ) {
+    struct IAgentCtlCommandEx * _result;
+    HRESULT _hr = raw_Command(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCommandExPtr(_result, false);
+}
+
+inline long IAgentCtlCommands::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlCommands::GetCaption ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Caption(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommands::PutCaption ( _bstr_t Caption ) {
+    HRESULT _hr = put_Caption(Caption);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommands::GetVoice ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Voice(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommands::PutVoice ( _bstr_t Voice ) {
+    HRESULT _hr = put_Voice(Voice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCommands::GetVisible ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommands::PutVisible ( VARIANT_BOOL Visible ) {
+    HRESULT _hr = put_Visible(Visible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IUnknownPtr IAgentCtlCommands::GetEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_Enum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IAgentCtlCommandPtr IAgentCtlCommands::Add ( _bstr_t Name, const _variant_t & Caption, const _variant_t & Voice, const _variant_t & Enabled, const _variant_t & Visible ) {
+    struct IAgentCtlCommand * _result;
+    HRESULT _hr = raw_Add(Name, Caption, Voice, Enabled, Visible, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCommandPtr(_result, false);
+}
+
+inline IAgentCtlCommandPtr IAgentCtlCommands::Insert ( _bstr_t Name, _bstr_t RefName, const _variant_t & Before, const _variant_t & Caption, const _variant_t & Voice, const _variant_t & Enabled, const _variant_t & Visible ) {
+    struct IAgentCtlCommand * _result;
+    HRESULT _hr = raw_Insert(Name, RefName, Before, Caption, Voice, Enabled, Visible, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCommandPtr(_result, false);
+}
+
+inline HRESULT IAgentCtlCommands::Remove ( _bstr_t Name ) {
+    HRESULT _hr = raw_Remove(Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IAgentCtlCommands::RemoveAll ( ) {
+    HRESULT _hr = raw_RemoveAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IAgentCtlCommandsEx wrapper method implementations
+//
+
+inline void IAgentCtlCommandsEx::PutDefaultCommand ( _bstr_t Name ) {
+    HRESULT _hr = put_DefaultCommand(Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommandsEx::GetDefaultCommand ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DefaultCommand(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommandsEx::PutHelpContextID ( long ID ) {
+    HRESULT _hr = put_HelpContextID(ID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAgentCtlCommandsEx::GetHelpContextID ( ) {
+    long _result;
+    HRESULT _hr = get_HelpContextID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommandsEx::PutFontName ( _bstr_t FontName ) {
+    HRESULT _hr = put_FontName(FontName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommandsEx::GetFontName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FontName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAgentCtlCommandsEx::GetFontSize ( ) {
+    long _result;
+    HRESULT _hr = get_FontSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommandsEx::PutFontSize ( long FontSize ) {
+    HRESULT _hr = put_FontSize(FontSize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IAgentCtlCommandsEx::PutVoiceCaption ( _bstr_t VoiceCaption ) {
+    HRESULT _hr = put_VoiceCaption(VoiceCaption);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommandsEx::GetVoiceCaption ( ) {
+    BSTR _result;
+    HRESULT _hr = get_VoiceCaption(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommandsEx::PutGlobalVoiceCommandsEnabled ( VARIANT_BOOL Enable ) {
+    HRESULT _hr = put_GlobalVoiceCommandsEnabled(Enable);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCommandsEx::GetGlobalVoiceCommandsEnabled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_GlobalVoiceCommandsEnabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlCommand wrapper method implementations
+//
+
+inline _bstr_t IAgentCtlCommand::GetVoice ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Voice(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommand::PutVoice ( _bstr_t Voice ) {
+    HRESULT _hr = put_Voice(Voice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommand::GetCaption ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Caption(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommand::PutCaption ( _bstr_t Caption ) {
+    HRESULT _hr = put_Caption(Caption);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCommand::GetEnabled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Enabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommand::PutEnabled ( VARIANT_BOOL Enabled ) {
+    HRESULT _hr = put_Enabled(Enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlCommand::GetVisible ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommand::PutVisible ( VARIANT_BOOL Visible ) {
+    HRESULT _hr = put_Visible(Visible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAgentCtlCommand::GetConfidence ( ) {
+    long _result;
+    HRESULT _hr = get_Confidence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommand::PutConfidence ( long Confidence ) {
+    HRESULT _hr = put_Confidence(Confidence);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommand::GetConfidenceText ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ConfidenceText(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlCommand::PutConfidenceText ( _bstr_t Text ) {
+    HRESULT _hr = put_ConfidenceText(Text);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IAgentCtlCommandEx wrapper method implementations
+//
+
+inline void IAgentCtlCommandEx::PutHelpContextID ( long ID ) {
+    HRESULT _hr = put_HelpContextID(ID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAgentCtlCommandEx::GetHelpContextID ( ) {
+    long _result;
+    HRESULT _hr = get_HelpContextID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommandEx::PutVoiceCaption ( _bstr_t VoiceCaption ) {
+    HRESULT _hr = put_VoiceCaption(VoiceCaption);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlCommandEx::GetVoiceCaption ( ) {
+    BSTR _result;
+    HRESULT _hr = get_VoiceCaption(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IAgentCtlRequest wrapper method implementations
+//
+
+inline long IAgentCtlRequest::GetID ( ) {
+    long _result;
+    HRESULT _hr = get_ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IAgentCtlRequest::GetStatus ( ) {
+    long _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlRequest::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAgentCtlRequest::GetNumber ( ) {
+    long _result;
+    HRESULT _hr = get_Number(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlAnimationNames wrapper method implementations
+//
+
+inline IUnknownPtr IAgentCtlAnimationNames::GetEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_Enum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IAgentCtlAudioObject wrapper method implementations
+//
+
+inline VARIANT_BOOL IAgentCtlAudioObject::GetEnabled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Enabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IAgentCtlAudioObject::GetSoundEffects ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_SoundEffects(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlAudioObjectEx wrapper method implementations
+//
+
+inline short IAgentCtlAudioObjectEx::GetStatus ( ) {
+    short _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlSpeechInput wrapper method implementations
+//
+
+inline VARIANT_BOOL IAgentCtlSpeechInput::GetEnabled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Enabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlSpeechInput::GetLanguage ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Language(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IAgentCtlSpeechInput::GetHotKey ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HotKey(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IAgentCtlSpeechInput::GetInstalled ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Installed(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlSpeechInput::GetEngine ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Engine(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAgentCtlSpeechInput::PutEngine ( _bstr_t Engine ) {
+    HRESULT _hr = put_Engine(Engine);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlSpeechInput::GetListeningTip ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_ListeningTip(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlPropertySheet wrapper method implementations
+//
+
+inline short IAgentCtlPropertySheet::GetLeft ( ) {
+    short _result;
+    HRESULT _hr = get_Left(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlPropertySheet::GetTop ( ) {
+    short _result;
+    HRESULT _hr = get_Top(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlPropertySheet::GetHeight ( ) {
+    short _result;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlPropertySheet::GetWidth ( ) {
+    short _result;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlPropertySheet::PutVisible ( VARIANT_BOOL Visible ) {
+    HRESULT _hr = put_Visible(Visible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtlPropertySheet::GetVisible ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlPropertySheet::PutPage ( _bstr_t Page ) {
+    HRESULT _hr = put_Page(Page);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAgentCtlPropertySheet::GetPage ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Page(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IAgentCtlUserInput wrapper method implementations
+//
+
+inline short IAgentCtlUserInput::GetCount ( ) {
+    short _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlUserInput::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IAgentCtlUserInput::GetCharacterID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CharacterID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAgentCtlUserInput::GetConfidence ( ) {
+    long _result;
+    HRESULT _hr = get_Confidence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlUserInput::GetVoice ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Voice(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IAgentCtlUserInput::GetAlt1Name ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Alt1Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAgentCtlUserInput::GetAlt1Confidence ( ) {
+    long _result;
+    HRESULT _hr = get_Alt1Confidence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlUserInput::GetAlt1Voice ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Alt1Voice(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IAgentCtlUserInput::GetAlt2Name ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Alt2Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAgentCtlUserInput::GetAlt2Confidence ( ) {
+    long _result;
+    HRESULT _hr = get_Alt2Confidence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAgentCtlUserInput::GetAlt2Voice ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Alt2Voice(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IAgentCtlCommandsWindow wrapper method implementations
+//
+
+inline VARIANT_BOOL IAgentCtlCommandsWindow::GetVisible ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlCommandsWindow::PutVisible ( VARIANT_BOOL Visible ) {
+    HRESULT _hr = put_Visible(Visible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAgentCtlCommandsWindow::GetLeft ( ) {
+    short _result;
+    HRESULT _hr = get_Left(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlCommandsWindow::GetTop ( ) {
+    short _result;
+    HRESULT _hr = get_Top(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlCommandsWindow::GetHeight ( ) {
+    short _result;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline short IAgentCtlCommandsWindow::GetWidth ( ) {
+    short _result;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtl wrapper method implementations
+//
+
+inline IAgentCtlCharactersPtr IAgentCtl::GetCharacters ( ) {
+    struct IAgentCtlCharacters * _result;
+    HRESULT _hr = get_Characters(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCharactersPtr(_result, false);
+}
+
+inline IAgentCtlAudioObjectExPtr IAgentCtl::GetAudioOutput ( ) {
+    struct IAgentCtlAudioObjectEx * _result;
+    HRESULT _hr = get_AudioOutput(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlAudioObjectExPtr(_result, false);
+}
+
+inline IAgentCtlSpeechInputPtr IAgentCtl::GetSpeechInput ( ) {
+    struct IAgentCtlSpeechInput * _result;
+    HRESULT _hr = get_SpeechInput(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlSpeechInputPtr(_result, false);
+}
+
+inline IAgentCtlPropertySheetPtr IAgentCtl::GetPropertySheet ( ) {
+    struct IAgentCtlPropertySheet * _result;
+    HRESULT _hr = get_PropertySheet(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlPropertySheetPtr(_result, false);
+}
+
+inline IAgentCtlCommandsWindowPtr IAgentCtl::GetCommandsWindow ( ) {
+    struct IAgentCtlCommandsWindow * _result;
+    HRESULT _hr = get_CommandsWindow(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAgentCtlCommandsWindowPtr(_result, false);
+}
+
+inline VARIANT_BOOL IAgentCtl::GetConnected ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Connected(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtl::PutConnected ( VARIANT_BOOL Connected ) {
+    HRESULT _hr = put_Connected(Connected);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAgentCtl::GetSuspended ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_Suspended(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAgentCtlEx wrapper method implementations
+//
+
+inline HRESULT IAgentCtlEx::ShowDefaultCharacterProperties ( const _variant_t & x, const _variant_t & y ) {
+    HRESULT _hr = raw_ShowDefaultCharacterProperties(x, y);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IAgentCtlEx::GetRaiseRequestErrors ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_RaiseRequestErrors(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAgentCtlEx::PutRaiseRequestErrors ( VARIANT_BOOL RaiseErrors ) {
+    HRESULT _hr = put_RaiseRequestErrors(RaiseErrors);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// dispinterface _AgentEvents wrapper method implementations
+//
+
+inline HRESULT _AgentEvents::ActivateInput ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::DeactivateInput ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::Click ( _bstr_t CharacterID, short Button, short Shift, short x, short y ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002\x0002\x0002\x0002", (BSTR)CharacterID, Button, Shift, x, y);
+}
+
+inline HRESULT _AgentEvents::DblClick ( _bstr_t CharacterID, short Button, short Shift, short x, short y ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002\x0002\x0002\x0002", (BSTR)CharacterID, Button, Shift, x, y);
+}
+
+inline HRESULT _AgentEvents::DragStart ( _bstr_t CharacterID, short Button, short Shift, short x, short y ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002\x0002\x0002\x0002", (BSTR)CharacterID, Button, Shift, x, y);
+}
+
+inline HRESULT _AgentEvents::DragComplete ( _bstr_t CharacterID, short Button, short Shift, short x, short y ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002\x0002\x0002\x0002", (BSTR)CharacterID, Button, Shift, x, y);
+}
+
+inline HRESULT _AgentEvents::Show ( _bstr_t CharacterID, short Cause ) {
+    return _com_dispatch_method(this, 0xf, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002", (BSTR)CharacterID, Cause);
+}
+
+inline HRESULT _AgentEvents::Hide ( _bstr_t CharacterID, short Cause ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002", (BSTR)CharacterID, Cause);
+}
+
+inline HRESULT _AgentEvents::RequestStart ( IDispatch * Request ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", Request);
+}
+
+inline HRESULT _AgentEvents::RequestComplete ( IDispatch * Request ) {
+    return _com_dispatch_method(this, 0xb, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", Request);
+}
+
+inline HRESULT _AgentEvents::Restart ( ) {
+    return _com_dispatch_method(this, 0x15, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _AgentEvents::Shutdown ( ) {
+    return _com_dispatch_method(this, 0xc, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _AgentEvents::Bookmark ( long BookmarkID ) {
+    return _com_dispatch_method(this, 0x10, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", BookmarkID);
+}
+
+inline HRESULT _AgentEvents::Command ( IDispatch * UserInput ) {
+    return _com_dispatch_method(this, 0x11, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", UserInput);
+}
+
+inline HRESULT _AgentEvents::IdleStart ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x13, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::IdleComplete ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x14, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::Move ( _bstr_t CharacterID, short x, short y, short Cause ) {
+    return _com_dispatch_method(this, 0x16, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002\x0002\x0002", (BSTR)CharacterID, x, y, Cause);
+}
+
+inline HRESULT _AgentEvents::Size ( _bstr_t CharacterID, short Width, short Height ) {
+    return _com_dispatch_method(this, 0x17, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002\x0002", (BSTR)CharacterID, Width, Height);
+}
+
+inline HRESULT _AgentEvents::BalloonShow ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x18, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::BalloonHide ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x19, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::HelpComplete ( _bstr_t CharacterID, _bstr_t Name, short Cause ) {
+    return _com_dispatch_method(this, 0x1a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0008\x0002", (BSTR)CharacterID, (BSTR)Name, Cause);
+}
+
+inline HRESULT _AgentEvents::ListenStart ( _bstr_t CharacterID ) {
+    return _com_dispatch_method(this, 0x1b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)CharacterID);
+}
+
+inline HRESULT _AgentEvents::ListenComplete ( _bstr_t CharacterID, short Cause ) {
+    return _com_dispatch_method(this, 0x1c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0002", (BSTR)CharacterID, Cause);
+}
+
+inline HRESULT _AgentEvents::DefaultCharacterChange ( _bstr_t GUID ) {
+    return _com_dispatch_method(this, 0x1e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)GUID);
+}
+
+inline HRESULT _AgentEvents::AgentPropertyChange ( ) {
+    return _com_dispatch_method(this, 0x1f, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _AgentEvents::ActiveClientChange ( _bstr_t CharacterID, VARIANT_BOOL Active ) {
+    return _com_dispatch_method(this, 0x20, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x000b", (BSTR)CharacterID, Active);
+}

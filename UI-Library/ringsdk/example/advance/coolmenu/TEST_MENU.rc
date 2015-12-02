@@ -1,0 +1,169 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON6               ICON    DISCARDABLE     "hd-k.ico"
+IDI_ICON2               ICON    DISCARDABLE     "hd-d.ico"
+IDI_ICON3               ICON    DISCARDABLE     "hd-e.ico"
+IDI_ICON4               ICON    DISCARDABLE     "hd-f.ico"
+IDI_ICON5               ICON    DISCARDABLE     "hd-j.ico"
+IDI_ICON1               ICON    DISCARDABLE     "hd-c.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_XP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "测试菜单C",                   CM_POPUPITEM1
+        MENUITEM "测试菜单D",                   CM_POPUPITEM2
+        MENUITEM "测试菜单E",                   CM_POPUPITEM3
+        MENUITEM "测试菜单F",                   CM_POPUPITEM4
+        MENUITEM "测试菜单J",                   CM_POPUPITEM5
+        MENUITEM "测试菜单K",                   CM_POPUPITEM6
+    END
+END
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "演示菜单一"
+    BEGIN
+        MENUITEM "显示版权栏",                  CM_SHOWCOPYRIGHT
+        MENUITEM "显示背景图象",                CM_SHOWBKG
+        MENUITEM "显示菜单背景色",              CM_SHOWBKGCOLOR
+        MENUITEM "显示菜单选中图象",            CM_SHOWSELECTBKG
+        MENUITEM "显示图标",                    CM_SHOWICON
+        MENUITEM SEPARATOR
+        POPUP "这是一个弹出菜单"
+        BEGIN
+            MENUITEM "子菜单项一",                  CM_TESTPOPITEM1
+            MENUITEM "子菜单项二",                  CM_TESTPOPITEM2
+            MENUITEM "子菜单项三",                  301
+            MENUITEM "子菜单项四",                  302
+            MENUITEM "子菜单项五",                  303
+            MENUITEM "子菜单项六",                  304
+            MENUITEM "子菜单项七",                  305
+            MENUITEM "子菜单项八",                  306
+            MENUITEM "子菜单项九",                  307
+            MENUITEM "子菜单项一○",                308
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "增加菜单项",                  CM_ADDMENUITEM
+        MENUITEM "删除菜单项",                  CM_DELMENUITEM
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        CM_EXIT
+    END
+    POPUP "演示菜单二"
+    BEGIN
+        MENUITEM "子菜单项一",                  309
+        MENUITEM "子菜单项二",                  310
+        MENUITEM "子菜单项三",                  311
+        MENUITEM "子菜单项四",                  312
+        MENUITEM "子菜单项五",                  313
+        MENUITEM "子菜单项六",                  314
+        MENUITEM "子菜单项七",                  315
+        MENUITEM "子菜单项八",                  316
+        MENUITEM "子菜单项九",                  317
+        MENUITEM "子菜单项一○",                318
+    END
+    POPUP "Office XP 菜单"
+    BEGIN
+        MENUITEM "测试菜单C",                   CM_POPUPITEM1
+        MENUITEM "测试菜单D",                   CM_POPUPITEM2
+        MENUITEM "测试菜单E",                   CM_POPUPITEM3
+        MENUITEM "测试菜单F",                   CM_POPUPITEM4
+        MENUITEM "测试菜单J",                   CM_POPUPITEM5
+        MENUITEM "测试菜单K",                   CM_POPUPITEM6
+        MENUITEM SEPARATOR
+        MENUITEM "Office XP 菜单",              CM_EXIT2
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "bkg.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "mark.bmp"
+IDB_ZBZ                 BITMAP  DISCARDABLE     "menu1.bmp"
+IDB_TYJX                BITMAP  DISCARDABLE     "menu2.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "sel.bmp"
+IDB_BUTTONS             BITMAP  DISCARDABLE     "TOOLBAR.BMP"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

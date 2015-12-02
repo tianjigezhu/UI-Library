@@ -1,0 +1,1424 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (18468f35).
+//
+// e:\ringsdk\ringsdk\example\activex\msagentdemo\debug\agentctl.tlh
+//
+// C++ source equivalent of Win32 type library C:\WINNT.0\msagent\agentctl.dll
+// compiler-generated file created 09/15/06 at 00:48:04 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace AgentObjects {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("f5be8be8-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlCharacters;
+struct __declspec(uuid("de8ef600-2f82-11d1-acac-00c04fd97575"))
+/* dual interface */ IAgentCtlCharacterEx;
+struct __declspec(uuid("f5be8bd9-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlCharacter;
+struct __declspec(uuid("822db1c0-8879-11d1-9ec6-00c04fd7081f"))
+/* dual interface */ IAgentCtlBalloonEx;
+struct __declspec(uuid("f5be8bd3-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlBalloon;
+struct __declspec(uuid("6ba90c01-3910-11d1-acb3-00c04fd97575"))
+/* dual interface */ IAgentCtlCommandsEx;
+struct __declspec(uuid("f5be8be1-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlCommands;
+struct __declspec(uuid("b0913410-3b44-11d1-acba-00c04fd97575"))
+/* dual interface */ IAgentCtlCommandEx;
+struct __declspec(uuid("f5be8be3-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlCommand;
+struct __declspec(uuid("1dab85c3-803a-11d0-ac63-00c04fd97575"))
+/* dual interface */ IAgentCtlRequest;
+struct __declspec(uuid("8b77181c-d3ef-11d1-8500-00c04fa34a14"))
+/* dual interface */ IAgentCtlAnimationNames;
+struct __declspec(uuid("f5be8bdb-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlAudioObject;
+struct __declspec(uuid("f5be8bf0-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlAudioObjectEx;
+struct __declspec(uuid("f5be8bdd-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlSpeechInput;
+struct __declspec(uuid("f5be8bdf-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtlPropertySheet;
+struct __declspec(uuid("c4abf875-8100-11d0-ac63-00c04fd97575"))
+/* dual interface */ IAgentCtlUserInput;
+struct __declspec(uuid("6d0ecb27-9968-11d0-ac6e-00c04fd97575"))
+/* dual interface */ IAgentCtlCommandsWindow;
+struct __declspec(uuid("f5be8bd1-7de6-11d0-91fe-00c04fd701a5"))
+/* dual interface */ IAgentCtl;
+struct __declspec(uuid("8563ff20-8ecc-11d1-b9b4-00c04fd97575"))
+/* dual interface */ IAgentCtlEx;
+struct __declspec(uuid("f5be8bd4-7de6-11d0-91fe-00c04fd701a5"))
+/* dispinterface */ _AgentEvents;
+struct /* coclass */ Agent;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCharacters, __uuidof(IAgentCtlCharacters));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCharacter, __uuidof(IAgentCtlCharacter));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCharacterEx, __uuidof(IAgentCtlCharacterEx));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlBalloon, __uuidof(IAgentCtlBalloon));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlBalloonEx, __uuidof(IAgentCtlBalloonEx));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCommands, __uuidof(IAgentCtlCommands));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCommandsEx, __uuidof(IAgentCtlCommandsEx));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCommand, __uuidof(IAgentCtlCommand));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCommandEx, __uuidof(IAgentCtlCommandEx));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlRequest, __uuidof(IAgentCtlRequest));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlAnimationNames, __uuidof(IAgentCtlAnimationNames));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlAudioObject, __uuidof(IAgentCtlAudioObject));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlAudioObjectEx, __uuidof(IAgentCtlAudioObjectEx));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlSpeechInput, __uuidof(IAgentCtlSpeechInput));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlPropertySheet, __uuidof(IAgentCtlPropertySheet));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlUserInput, __uuidof(IAgentCtlUserInput));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlCommandsWindow, __uuidof(IAgentCtlCommandsWindow));
+_COM_SMARTPTR_TYPEDEF(IAgentCtl, __uuidof(IAgentCtl));
+_COM_SMARTPTR_TYPEDEF(IAgentCtlEx, __uuidof(IAgentCtlEx));
+_COM_SMARTPTR_TYPEDEF(_AgentEvents, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("f5be8be8-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlCharacters : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IAgentCtlCharacterExPtr Item[];
+    __declspec(property(get=GetEnum))
+    IUnknownPtr Enum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IAgentCtlCharacterExPtr GetItem (
+        _bstr_t CharacterID );
+    IAgentCtlCharacterExPtr Character (
+        _bstr_t CharacterID );
+    IUnknownPtr GetEnum ( );
+    HRESULT Unload (
+        _bstr_t CharacterID );
+    IAgentCtlRequestPtr Load (
+        _bstr_t CharacterID,
+        const _variant_t & LoadKey = vtMissing );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        BSTR CharacterID,
+        struct IAgentCtlCharacterEx * * ppidItem ) = 0;
+    virtual HRESULT __stdcall raw_Character (
+        BSTR CharacterID,
+        struct IAgentCtlCharacterEx * * ppidItem ) = 0;
+    virtual HRESULT __stdcall get_Enum (
+        IUnknown * * ppunkEnum ) = 0;
+    virtual HRESULT __stdcall raw_Unload (
+        BSTR CharacterID ) = 0;
+    virtual HRESULT __stdcall raw_Load (
+        BSTR CharacterID,
+        VARIANT LoadKey,
+        struct IAgentCtlRequest * * ppidRequest ) = 0;
+};
+
+struct __declspec(uuid("f5be8bd9-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlCharacter : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMoveCause))
+    short MoveCause;
+    __declspec(property(get=GetVisibilityCause))
+    short VisibilityCause;
+    __declspec(property(get=GetVisible))
+    VARIANT_BOOL Visible;
+    __declspec(property(get=GetHasOtherClients))
+    VARIANT_BOOL HasOtherClients;
+    __declspec(property(get=GetExtraData))
+    _bstr_t ExtraData;
+    __declspec(property(get=GetSpeed))
+    long Speed;
+    __declspec(property(get=GetPitch))
+    long Pitch;
+    __declspec(property(get=GetBalloon))
+    IAgentCtlBalloonExPtr Balloon;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetCommands))
+    IAgentCtlCommandsExPtr Commands;
+    __declspec(property(get=GetDescription,put=PutDescription))
+    _bstr_t Description;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IAgentCtlBalloonExPtr GetBalloon ( );
+    IAgentCtlCommandsExPtr GetCommands ( );
+    _bstr_t GetName ( );
+    _bstr_t GetDescription ( );
+    VARIANT_BOOL GetVisible ( );
+    void PutLeft (
+        short Left );
+    short GetLeft ( );
+    void PutTop (
+        short Top );
+    short GetTop ( );
+    void PutHeight (
+        short Height );
+    short GetHeight ( );
+    void PutWidth (
+        short Width );
+    short GetWidth ( );
+    long GetSpeed ( );
+    long GetPitch ( );
+    void PutIdleOn (
+        VARIANT_BOOL On );
+    VARIANT_BOOL GetIdleOn ( );
+    VARIANT_BOOL Activate (
+        const _variant_t & State = vtMissing );
+    IAgentCtlRequestPtr Play (
+        _bstr_t Animation );
+    IAgentCtlRequestPtr Get (
+        _bstr_t Type,
+        _bstr_t Name,
+        const _variant_t & Queue = vtMissing );
+    HRESULT Stop (
+        const _variant_t & Request = vtMissing );
+    IAgentCtlRequestPtr Wait (
+        IDispatch * WaitForRequest );
+    IAgentCtlRequestPtr Interrupt (
+        IDispatch * InterruptRequest );
+    IAgentCtlRequestPtr Speak (
+        const _variant_t & Text = vtMissing,
+        const _variant_t & Url = vtMissing );
+    IAgentCtlRequestPtr GestureAt (
+        short x,
+        short y );
+    IAgentCtlRequestPtr MoveTo (
+        short x,
+        short y,
+        const _variant_t & Speed = vtMissing );
+    IAgentCtlRequestPtr Hide (
+        const _variant_t & Fast = vtMissing );
+    IAgentCtlRequestPtr Show (
+        const _variant_t & Fast = vtMissing );
+    HRESULT StopAll (
+        const _variant_t & Types = vtMissing );
+    short GetMoveCause ( );
+    short GetVisibilityCause ( );
+    VARIANT_BOOL GetHasOtherClients ( );
+    void PutSoundEffectsOn (
+        VARIANT_BOOL On );
+    VARIANT_BOOL GetSoundEffectsOn ( );
+    void PutName (
+        _bstr_t Name );
+    void PutDescription (
+        _bstr_t Description );
+    _bstr_t GetExtraData ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Balloon (
+        struct IAgentCtlBalloonEx * * ppidBalloon ) = 0;
+    virtual HRESULT __stdcall get_Commands (
+        struct IAgentCtlCommandsEx * * ppidCommands ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * Name ) = 0;
+    virtual HRESULT __stdcall get_Description (
+        BSTR * Description ) = 0;
+    virtual HRESULT __stdcall get_Visible (
+        VARIANT_BOOL * Visible ) = 0;
+    virtual HRESULT __stdcall put_Left (
+        short Left ) = 0;
+    virtual HRESULT __stdcall get_Left (
+        short * Left ) = 0;
+    virtual HRESULT __stdcall put_Top (
+        short Top ) = 0;
+    virtual HRESULT __stdcall get_Top (
+        short * Top ) = 0;
+    virtual HRESULT __stdcall put_Height (
+        short Height ) = 0;
+    virtual HRESULT __stdcall get_Height (
+        short * Height ) = 0;
+    virtual HRESULT __stdcall put_Width (
+        short Width ) = 0;
+    virtual HRESULT __stdcall get_Width (
+        short * Width ) = 0;
+    virtual HRESULT __stdcall get_Speed (
+        long * Speed ) = 0;
+    virtual HRESULT __stdcall get_Pitch (
+        long * Pitch ) = 0;
+    virtual HRESULT __stdcall put_IdleOn (
+        VARIANT_BOOL On ) = 0;
+    virtual HRESULT __stdcall get_IdleOn (
+        VARIANT_BOOL * On ) = 0;
+    virtual HRESULT __stdcall raw_Activate (
+        VARIANT State,
+        VARIANT_BOOL * Success ) = 0;
+    virtual HRESULT __stdcall raw_Play (
+        BSTR Animation,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Get (
+        BSTR Type,
+        BSTR Name,
+        VARIANT Queue,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Stop (
+        VARIANT Request = vtMissing ) = 0;
+    virtual HRESULT __stdcall raw_Wait (
+        IDispatch * WaitForRequest,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Interrupt (
+        IDispatch * InterruptRequest,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Speak (
+        VARIANT Text,
+        VARIANT Url,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_GestureAt (
+        short x,
+        short y,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_MoveTo (
+        short x,
+        short y,
+        VARIANT Speed,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Hide (
+        VARIANT Fast,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Show (
+        VARIANT Fast,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall raw_StopAll (
+        VARIANT Types = vtMissing ) = 0;
+    virtual HRESULT __stdcall get_MoveCause (
+        short * MoveCause ) = 0;
+    virtual HRESULT __stdcall get_VisibilityCause (
+        short * VisibilityCause ) = 0;
+    virtual HRESULT __stdcall get_HasOtherClients (
+        VARIANT_BOOL * HasOtherClients ) = 0;
+    virtual HRESULT __stdcall put_SoundEffectsOn (
+        VARIANT_BOOL On ) = 0;
+    virtual HRESULT __stdcall get_SoundEffectsOn (
+        VARIANT_BOOL * On ) = 0;
+    virtual HRESULT __stdcall put_Name (
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall put_Description (
+        BSTR Description ) = 0;
+    virtual HRESULT __stdcall get_ExtraData (
+        BSTR * ExtraData ) = 0;
+};
+
+struct __declspec(uuid("de8ef600-2f82-11d1-acac-00c04fd97575"))
+IAgentCtlCharacterEx : IAgentCtlCharacter
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAutoPopupMenu,put=PutAutoPopupMenu))
+    VARIANT_BOOL AutoPopupMenu;
+    __declspec(property(get=GetHelpModeOn,put=PutHelpModeOn))
+    VARIANT_BOOL HelpModeOn;
+    __declspec(property(get=GetHelpContextID,put=PutHelpContextID))
+    long HelpContextID;
+    __declspec(property(get=GetActive))
+    short Active;
+    __declspec(property(get=GetLanguageID,put=PutLanguageID))
+    long LanguageID;
+    __declspec(property(get=GetSRModeID,put=PutSRModeID))
+    _bstr_t SRModeID;
+    __declspec(property(get=GetTTSModeID,put=PutTTSModeID))
+    _bstr_t TTSModeID;
+    __declspec(property(get=GetHelpFile,put=PutHelpFile))
+    _bstr_t HelpFile;
+    __declspec(property(get=GetGUID))
+    _bstr_t GUID;
+    __declspec(property(get=GetOriginalHeight))
+    short OriginalHeight;
+    __declspec(property(get=GetOriginalWidth))
+    short OriginalWidth;
+    __declspec(property(get=GetVersion))
+    _bstr_t Version;
+    __declspec(property(get=GetAnimationNames))
+    IAgentCtlAnimationNamesPtr AnimationNames;
+    __declspec(property(get=GetSRStatus))
+    long SRStatus;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL ShowPopupMenu (
+        short x,
+        short y );
+    void PutAutoPopupMenu (
+        VARIANT_BOOL On );
+    VARIANT_BOOL GetAutoPopupMenu ( );
+    void PutHelpModeOn (
+        VARIANT_BOOL On );
+    VARIANT_BOOL GetHelpModeOn ( );
+    void PutHelpContextID (
+        long ID );
+    long GetHelpContextID ( );
+    short GetActive ( );
+    VARIANT_BOOL Listen (
+        VARIANT_BOOL Listen );
+    void PutLanguageID (
+        long LanguageID );
+    long GetLanguageID ( );
+    _bstr_t GetSRModeID ( );
+    void PutSRModeID (
+        _bstr_t EngineModeId );
+    _bstr_t GetTTSModeID ( );
+    void PutTTSModeID (
+        _bstr_t EngineModeId );
+    _bstr_t GetHelpFile ( );
+    void PutHelpFile (
+        _bstr_t File );
+    _bstr_t GetGUID ( );
+    short GetOriginalHeight ( );
+    short GetOriginalWidth ( );
+    IAgentCtlRequestPtr Think (
+        _bstr_t Text );
+    _bstr_t GetVersion ( );
+    IAgentCtlAnimationNamesPtr GetAnimationNames ( );
+    long GetSRStatus ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_ShowPopupMenu (
+        short x,
+        short y,
+        VARIANT_BOOL * Showed ) = 0;
+    virtual HRESULT __stdcall put_AutoPopupMenu (
+        VARIANT_BOOL On ) = 0;
+    virtual HRESULT __stdcall get_AutoPopupMenu (
+        VARIANT_BOOL * On ) = 0;
+    virtual HRESULT __stdcall put_HelpModeOn (
+        VARIANT_BOOL On ) = 0;
+    virtual HRESULT __stdcall get_HelpModeOn (
+        VARIANT_BOOL * On ) = 0;
+    virtual HRESULT __stdcall put_HelpContextID (
+        long ID ) = 0;
+    virtual HRESULT __stdcall get_HelpContextID (
+        long * ID ) = 0;
+    virtual HRESULT __stdcall get_Active (
+        short * State ) = 0;
+    virtual HRESULT __stdcall raw_Listen (
+        VARIANT_BOOL Listen,
+        VARIANT_BOOL * StartedListening ) = 0;
+    virtual HRESULT __stdcall put_LanguageID (
+        long LanguageID ) = 0;
+    virtual HRESULT __stdcall get_LanguageID (
+        long * LanguageID ) = 0;
+    virtual HRESULT __stdcall get_SRModeID (
+        BSTR * EngineModeId ) = 0;
+    virtual HRESULT __stdcall put_SRModeID (
+        BSTR EngineModeId ) = 0;
+    virtual HRESULT __stdcall get_TTSModeID (
+        BSTR * EngineModeId ) = 0;
+    virtual HRESULT __stdcall put_TTSModeID (
+        BSTR EngineModeId ) = 0;
+    virtual HRESULT __stdcall get_HelpFile (
+        BSTR * File ) = 0;
+    virtual HRESULT __stdcall put_HelpFile (
+        BSTR File ) = 0;
+    virtual HRESULT __stdcall get_GUID (
+        BSTR * GUID ) = 0;
+    virtual HRESULT __stdcall get_OriginalHeight (
+        short * Height ) = 0;
+    virtual HRESULT __stdcall get_OriginalWidth (
+        short * Width ) = 0;
+    virtual HRESULT __stdcall raw_Think (
+        BSTR Text,
+        struct IAgentCtlRequest * * Request ) = 0;
+    virtual HRESULT __stdcall get_Version (
+        BSTR * Version ) = 0;
+    virtual HRESULT __stdcall get_AnimationNames (
+        struct IAgentCtlAnimationNames * * Names ) = 0;
+    virtual HRESULT __stdcall get_SRStatus (
+        long * Status ) = 0;
+};
+
+struct __declspec(uuid("f5be8bd3-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlBalloon : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEnabled))
+    VARIANT_BOOL Enabled;
+    __declspec(property(get=GetNumberOfLines))
+    long NumberOfLines;
+    __declspec(property(get=GetCharsPerLine))
+    long CharsPerLine;
+    __declspec(property(get=GetFontName,put=PutFontName))
+    _bstr_t FontName;
+    __declspec(property(get=GetFontSize,put=PutFontSize))
+    long FontSize;
+    __declspec(property(get=GetForeColor))
+    long ForeColor;
+    __declspec(property(get=GetBackColor))
+    long BackColor;
+    __declspec(property(get=GetBorderColor))
+    long BorderColor;
+    __declspec(property(get=GetFontBold))
+    VARIANT_BOOL FontBold;
+    __declspec(property(get=GetFontItalic))
+    VARIANT_BOOL FontItalic;
+    __declspec(property(get=GetFontStrikethru))
+    VARIANT_BOOL FontStrikethru;
+    __declspec(property(get=GetFontUnderline))
+    VARIANT_BOOL FontUnderline;
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+    __declspec(property(get=GetFontCharSet,put=PutFontCharSet))
+    short FontCharSet;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetEnabled ( );
+    long GetNumberOfLines ( );
+    long GetCharsPerLine ( );
+    _bstr_t GetFontName ( );
+    long GetFontSize ( );
+    VARIANT_BOOL GetFontBold ( );
+    VARIANT_BOOL GetFontItalic ( );
+    VARIANT_BOOL GetFontStrikethru ( );
+    VARIANT_BOOL GetFontUnderline ( );
+    long GetForeColor ( );
+    long GetBackColor ( );
+    long GetBorderColor ( );
+    void PutVisible (
+        VARIANT_BOOL Visible );
+    VARIANT_BOOL GetVisible ( );
+    void PutFontName (
+        _bstr_t FontName );
+    void PutFontSize (
+        long FontSize );
+    void PutFontCharSet (
+        short FontCharSet );
+    short GetFontCharSet ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Enabled (
+        VARIANT_BOOL * Enabled ) = 0;
+    virtual HRESULT __stdcall get_NumberOfLines (
+        long * Lines ) = 0;
+    virtual HRESULT __stdcall get_CharsPerLine (
+        long * CharsPerLine ) = 0;
+    virtual HRESULT __stdcall get_FontName (
+        BSTR * FontName ) = 0;
+    virtual HRESULT __stdcall get_FontSize (
+        long * FontSize ) = 0;
+    virtual HRESULT __stdcall get_FontBold (
+        VARIANT_BOOL * FontBold ) = 0;
+    virtual HRESULT __stdcall get_FontItalic (
+        VARIANT_BOOL * FontItalic ) = 0;
+    virtual HRESULT __stdcall get_FontStrikethru (
+        VARIANT_BOOL * FontStrikethru ) = 0;
+    virtual HRESULT __stdcall get_FontUnderline (
+        VARIANT_BOOL * FontUnderline ) = 0;
+    virtual HRESULT __stdcall get_ForeColor (
+        long * ForeColor ) = 0;
+    virtual HRESULT __stdcall get_BackColor (
+        long * BackColor ) = 0;
+    virtual HRESULT __stdcall get_BorderColor (
+        long * BorderColor ) = 0;
+    virtual HRESULT __stdcall put_Visible (
+        VARIANT_BOOL Visible ) = 0;
+    virtual HRESULT __stdcall get_Visible (
+        VARIANT_BOOL * Visible ) = 0;
+    virtual HRESULT __stdcall put_FontName (
+        BSTR FontName ) = 0;
+    virtual HRESULT __stdcall put_FontSize (
+        long FontSize ) = 0;
+    virtual HRESULT __stdcall put_FontCharSet (
+        short FontCharSet ) = 0;
+    virtual HRESULT __stdcall get_FontCharSet (
+        short * FontCharSet ) = 0;
+};
+
+struct __declspec(uuid("822db1c0-8879-11d1-9ec6-00c04fd7081f"))
+IAgentCtlBalloonEx : IAgentCtlBalloon
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStyle,put=PutStyle))
+    long Style;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutStyle (
+        long Style );
+    long GetStyle ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall put_Style (
+        long Style ) = 0;
+    virtual HRESULT __stdcall get_Style (
+        long * Style ) = 0;
+};
+
+struct __declspec(uuid("f5be8be1-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlCommands : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IAgentCtlCommandExPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetCaption,put=PutCaption))
+    _bstr_t Caption;
+    __declspec(property(get=GetVoice,put=PutVoice))
+    _bstr_t Voice;
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+    __declspec(property(get=GetEnum))
+    IUnknownPtr Enum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IAgentCtlCommandExPtr GetItem (
+        _bstr_t Name );
+    IAgentCtlCommandExPtr Command (
+        _bstr_t Name );
+    long GetCount ( );
+    _bstr_t GetCaption ( );
+    void PutCaption (
+        _bstr_t Caption );
+    _bstr_t GetVoice ( );
+    void PutVoice (
+        _bstr_t Voice );
+    VARIANT_BOOL GetVisible ( );
+    void PutVisible (
+        VARIANT_BOOL Visible );
+    IUnknownPtr GetEnum ( );
+    IAgentCtlCommandPtr Add (
+        _bstr_t Name,
+        const _variant_t & Caption = vtMissing,
+        const _variant_t & Voice = vtMissing,
+        const _variant_t & Enabled = vtMissing,
+        const _variant_t & Visible = vtMissing );
+    IAgentCtlCommandPtr Insert (
+        _bstr_t Name,
+        _bstr_t RefName,
+        const _variant_t & Before = vtMissing,
+        const _variant_t & Caption = vtMissing,
+        const _variant_t & Voice = vtMissing,
+        const _variant_t & Enabled = vtMissing,
+        const _variant_t & Visible = vtMissing );
+    HRESULT Remove (
+        _bstr_t Name );
+    HRESULT RemoveAll ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        BSTR Name,
+        struct IAgentCtlCommandEx * * Item ) = 0;
+    virtual HRESULT __stdcall raw_Command (
+        BSTR Name,
+        struct IAgentCtlCommandEx * * Item ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall get_Caption (
+        BSTR * Caption ) = 0;
+    virtual HRESULT __stdcall put_Caption (
+        BSTR Caption ) = 0;
+    virtual HRESULT __stdcall get_Voice (
+        BSTR * Voice ) = 0;
+    virtual HRESULT __stdcall put_Voice (
+        BSTR Voice ) = 0;
+    virtual HRESULT __stdcall get_Visible (
+        VARIANT_BOOL * Visible ) = 0;
+    virtual HRESULT __stdcall put_Visible (
+        VARIANT_BOOL Visible ) = 0;
+    virtual HRESULT __stdcall get_Enum (
+        IUnknown * * ppunkEnum ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        BSTR Name,
+        VARIANT Caption,
+        VARIANT Voice,
+        VARIANT Enabled,
+        VARIANT Visible,
+        struct IAgentCtlCommand * * Command ) = 0;
+    virtual HRESULT __stdcall raw_Insert (
+        BSTR Name,
+        BSTR RefName,
+        VARIANT Before,
+        VARIANT Caption,
+        VARIANT Voice,
+        VARIANT Enabled,
+        VARIANT Visible,
+        struct IAgentCtlCommand * * Command ) = 0;
+    virtual HRESULT __stdcall raw_Remove (
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall raw_RemoveAll ( ) = 0;
+};
+
+struct __declspec(uuid("6ba90c01-3910-11d1-acb3-00c04fd97575"))
+IAgentCtlCommandsEx : IAgentCtlCommands
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDefaultCommand,put=PutDefaultCommand))
+    _bstr_t DefaultCommand;
+    __declspec(property(get=GetHelpContextID,put=PutHelpContextID))
+    long HelpContextID;
+    __declspec(property(get=GetFontName,put=PutFontName))
+    _bstr_t FontName;
+    __declspec(property(get=GetVoiceCaption,put=PutVoiceCaption))
+    _bstr_t VoiceCaption;
+    __declspec(property(get=GetFontSize,put=PutFontSize))
+    long FontSize;
+    __declspec(property(get=GetGlobalVoiceCommandsEnabled,put=PutGlobalVoiceCommandsEnabled))
+    VARIANT_BOOL GlobalVoiceCommandsEnabled;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutDefaultCommand (
+        _bstr_t Name );
+    _bstr_t GetDefaultCommand ( );
+    void PutHelpContextID (
+        long ID );
+    long GetHelpContextID ( );
+    void PutFontName (
+        _bstr_t FontName );
+    _bstr_t GetFontName ( );
+    long GetFontSize ( );
+    void PutFontSize (
+        long FontSize );
+    void PutVoiceCaption (
+        _bstr_t VoiceCaption );
+    _bstr_t GetVoiceCaption ( );
+    void PutGlobalVoiceCommandsEnabled (
+        VARIANT_BOOL Enable );
+    VARIANT_BOOL GetGlobalVoiceCommandsEnabled ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall put_DefaultCommand (
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall get_DefaultCommand (
+        BSTR * Name ) = 0;
+    virtual HRESULT __stdcall put_HelpContextID (
+        long ID ) = 0;
+    virtual HRESULT __stdcall get_HelpContextID (
+        long * ID ) = 0;
+    virtual HRESULT __stdcall put_FontName (
+        BSTR FontName ) = 0;
+    virtual HRESULT __stdcall get_FontName (
+        BSTR * FontName ) = 0;
+    virtual HRESULT __stdcall get_FontSize (
+        long * FontSize ) = 0;
+    virtual HRESULT __stdcall put_FontSize (
+        long FontSize ) = 0;
+    virtual HRESULT __stdcall put_VoiceCaption (
+        BSTR VoiceCaption ) = 0;
+    virtual HRESULT __stdcall get_VoiceCaption (
+        BSTR * VoiceCaption ) = 0;
+    virtual HRESULT __stdcall put_GlobalVoiceCommandsEnabled (
+        VARIANT_BOOL Enable ) = 0;
+    virtual HRESULT __stdcall get_GlobalVoiceCommandsEnabled (
+        VARIANT_BOOL * Enable ) = 0;
+};
+
+struct __declspec(uuid("f5be8be3-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlCommand : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetVoice,put=PutVoice))
+    _bstr_t Voice;
+    __declspec(property(get=GetCaption,put=PutCaption))
+    _bstr_t Caption;
+    __declspec(property(get=GetConfidence,put=PutConfidence))
+    long Confidence;
+    __declspec(property(get=GetConfidenceText,put=PutConfidenceText))
+    _bstr_t ConfidenceText;
+    __declspec(property(get=GetEnabled,put=PutEnabled))
+    VARIANT_BOOL Enabled;
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetVoice ( );
+    void PutVoice (
+        _bstr_t Voice );
+    _bstr_t GetCaption ( );
+    void PutCaption (
+        _bstr_t Caption );
+    VARIANT_BOOL GetEnabled ( );
+    void PutEnabled (
+        VARIANT_BOOL Enabled );
+    VARIANT_BOOL GetVisible ( );
+    void PutVisible (
+        VARIANT_BOOL Visible );
+    long GetConfidence ( );
+    void PutConfidence (
+        long Confidence );
+    _bstr_t GetConfidenceText ( );
+    void PutConfidenceText (
+        _bstr_t Text );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Voice (
+        BSTR * Voice ) = 0;
+    virtual HRESULT __stdcall put_Voice (
+        BSTR Voice ) = 0;
+    virtual HRESULT __stdcall get_Caption (
+        BSTR * Caption ) = 0;
+    virtual HRESULT __stdcall put_Caption (
+        BSTR Caption ) = 0;
+    virtual HRESULT __stdcall get_Enabled (
+        VARIANT_BOOL * Enabled ) = 0;
+    virtual HRESULT __stdcall put_Enabled (
+        VARIANT_BOOL Enabled ) = 0;
+    virtual HRESULT __stdcall get_Visible (
+        VARIANT_BOOL * Visible ) = 0;
+    virtual HRESULT __stdcall put_Visible (
+        VARIANT_BOOL Visible ) = 0;
+    virtual HRESULT __stdcall get_Confidence (
+        long * Confidence ) = 0;
+    virtual HRESULT __stdcall put_Confidence (
+        long Confidence ) = 0;
+    virtual HRESULT __stdcall get_ConfidenceText (
+        BSTR * Text ) = 0;
+    virtual HRESULT __stdcall put_ConfidenceText (
+        BSTR Text ) = 0;
+};
+
+struct __declspec(uuid("b0913410-3b44-11d1-acba-00c04fd97575"))
+IAgentCtlCommandEx : IAgentCtlCommand
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetHelpContextID,put=PutHelpContextID))
+    long HelpContextID;
+    __declspec(property(get=GetVoiceCaption,put=PutVoiceCaption))
+    _bstr_t VoiceCaption;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutHelpContextID (
+        long ID );
+    long GetHelpContextID ( );
+    void PutVoiceCaption (
+        _bstr_t VoiceCaption );
+    _bstr_t GetVoiceCaption ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall put_HelpContextID (
+        long ID ) = 0;
+    virtual HRESULT __stdcall get_HelpContextID (
+        long * ID ) = 0;
+    virtual HRESULT __stdcall put_VoiceCaption (
+        BSTR VoiceCaption ) = 0;
+    virtual HRESULT __stdcall get_VoiceCaption (
+        BSTR * VoiceCaption ) = 0;
+};
+
+struct __declspec(uuid("1dab85c3-803a-11d0-ac63-00c04fd97575"))
+IAgentCtlRequest : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetID))
+    long ID;
+    __declspec(property(get=GetStatus))
+    long Status;
+    __declspec(property(get=GetDescription))
+    _bstr_t Description;
+    __declspec(property(get=GetNumber))
+    long Number;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetID ( );
+    long GetStatus ( );
+    _bstr_t GetDescription ( );
+    long GetNumber ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_ID (
+        long * ID ) = 0;
+    virtual HRESULT __stdcall get_Status (
+        long * Status ) = 0;
+    virtual HRESULT __stdcall get_Description (
+        BSTR * Description ) = 0;
+    virtual HRESULT __stdcall get_Number (
+        long * Number ) = 0;
+};
+
+struct __declspec(uuid("8b77181c-d3ef-11d1-8500-00c04fa34a14"))
+IAgentCtlAnimationNames : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEnum))
+    IUnknownPtr Enum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Enum (
+        IUnknown * * ppunkEnum ) = 0;
+};
+
+struct __declspec(uuid("f5be8bdb-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlAudioObject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEnabled))
+    VARIANT_BOOL Enabled;
+    __declspec(property(get=GetSoundEffects))
+    VARIANT_BOOL SoundEffects;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetEnabled ( );
+    VARIANT_BOOL GetSoundEffects ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Enabled (
+        VARIANT_BOOL * AudioEnabled ) = 0;
+    virtual HRESULT __stdcall get_SoundEffects (
+        VARIANT_BOOL * SoundEffects ) = 0;
+};
+
+struct __declspec(uuid("f5be8bf0-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlAudioObjectEx : IAgentCtlAudioObject
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStatus))
+    short Status;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetStatus ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Status (
+        short * Available ) = 0;
+};
+
+struct __declspec(uuid("f5be8bdd-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlSpeechInput : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEnabled))
+    VARIANT_BOOL Enabled;
+    __declspec(property(get=GetLanguage))
+    _bstr_t Language;
+    __declspec(property(get=GetHotKey))
+    _bstr_t HotKey;
+    __declspec(property(get=GetInstalled))
+    VARIANT_BOOL Installed;
+    __declspec(property(get=GetEngine,put=PutEngine))
+    _bstr_t Engine;
+    __declspec(property(get=GetListeningTip))
+    VARIANT_BOOL ListeningTip;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetEnabled ( );
+    _bstr_t GetLanguage ( );
+    _bstr_t GetHotKey ( );
+    VARIANT_BOOL GetInstalled ( );
+    _bstr_t GetEngine ( );
+    void PutEngine (
+        _bstr_t Engine );
+    VARIANT_BOOL GetListeningTip ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Enabled (
+        VARIANT_BOOL * VoiceEnabled ) = 0;
+    virtual HRESULT __stdcall get_Language (
+        BSTR * Language ) = 0;
+    virtual HRESULT __stdcall get_HotKey (
+        BSTR * HotKey ) = 0;
+    virtual HRESULT __stdcall get_Installed (
+        VARIANT_BOOL * VoiceInstalled ) = 0;
+    virtual HRESULT __stdcall get_Engine (
+        BSTR * Engine ) = 0;
+    virtual HRESULT __stdcall put_Engine (
+        BSTR Engine ) = 0;
+    virtual HRESULT __stdcall get_ListeningTip (
+        VARIANT_BOOL * ListeningTip ) = 0;
+};
+
+struct __declspec(uuid("f5be8bdf-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtlPropertySheet : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetLeft))
+    short Left;
+    __declspec(property(get=GetTop))
+    short Top;
+    __declspec(property(get=GetHeight))
+    short Height;
+    __declspec(property(get=GetWidth))
+    short Width;
+    __declspec(property(get=GetPage,put=PutPage))
+    _bstr_t Page;
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetLeft ( );
+    short GetTop ( );
+    short GetHeight ( );
+    short GetWidth ( );
+    void PutVisible (
+        VARIANT_BOOL Visible );
+    VARIANT_BOOL GetVisible ( );
+    void PutPage (
+        _bstr_t Page );
+    _bstr_t GetPage ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Left (
+        short * Left ) = 0;
+    virtual HRESULT __stdcall get_Top (
+        short * Top ) = 0;
+    virtual HRESULT __stdcall get_Height (
+        short * Height ) = 0;
+    virtual HRESULT __stdcall get_Width (
+        short * Width ) = 0;
+    virtual HRESULT __stdcall put_Visible (
+        VARIANT_BOOL Visible ) = 0;
+    virtual HRESULT __stdcall get_Visible (
+        VARIANT_BOOL * Visible ) = 0;
+    virtual HRESULT __stdcall put_Page (
+        BSTR Page ) = 0;
+    virtual HRESULT __stdcall get_Page (
+        BSTR * Page ) = 0;
+};
+
+struct __declspec(uuid("c4abf875-8100-11d0-ac63-00c04fd97575"))
+IAgentCtlUserInput : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    short Count;
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetCharacterID))
+    _bstr_t CharacterID;
+    __declspec(property(get=GetConfidence))
+    long Confidence;
+    __declspec(property(get=GetVoice))
+    _bstr_t Voice;
+    __declspec(property(get=GetAlt1Name))
+    _bstr_t Alt1Name;
+    __declspec(property(get=GetAlt1Confidence))
+    long Alt1Confidence;
+    __declspec(property(get=GetAlt1Voice))
+    _bstr_t Alt1Voice;
+    __declspec(property(get=GetAlt2Name))
+    _bstr_t Alt2Name;
+    __declspec(property(get=GetAlt2Confidence))
+    long Alt2Confidence;
+    __declspec(property(get=GetAlt2Voice))
+    _bstr_t Alt2Voice;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetCount ( );
+    _bstr_t GetName ( );
+    _bstr_t GetCharacterID ( );
+    long GetConfidence ( );
+    _bstr_t GetVoice ( );
+    _bstr_t GetAlt1Name ( );
+    long GetAlt1Confidence ( );
+    _bstr_t GetAlt1Voice ( );
+    _bstr_t GetAlt2Name ( );
+    long GetAlt2Confidence ( );
+    _bstr_t GetAlt2Voice ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Count (
+        short * pCount ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pName ) = 0;
+    virtual HRESULT __stdcall get_CharacterID (
+        BSTR * pCharacterID ) = 0;
+    virtual HRESULT __stdcall get_Confidence (
+        long * pConfidence ) = 0;
+    virtual HRESULT __stdcall get_Voice (
+        BSTR * pVoice ) = 0;
+    virtual HRESULT __stdcall get_Alt1Name (
+        BSTR * pAlt1Name ) = 0;
+    virtual HRESULT __stdcall get_Alt1Confidence (
+        long * pAlt1Confidence ) = 0;
+    virtual HRESULT __stdcall get_Alt1Voice (
+        BSTR * pAlt1Voice ) = 0;
+    virtual HRESULT __stdcall get_Alt2Name (
+        BSTR * pAlt2Name ) = 0;
+    virtual HRESULT __stdcall get_Alt2Confidence (
+        long * pAlt2Confidence ) = 0;
+    virtual HRESULT __stdcall get_Alt2Voice (
+        BSTR * pAlt2Voice ) = 0;
+};
+
+struct __declspec(uuid("6d0ecb27-9968-11d0-ac6e-00c04fd97575"))
+IAgentCtlCommandsWindow : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+    __declspec(property(get=GetLeft))
+    short Left;
+    __declspec(property(get=GetTop))
+    short Top;
+    __declspec(property(get=GetHeight))
+    short Height;
+    __declspec(property(get=GetWidth))
+    short Width;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetVisible ( );
+    void PutVisible (
+        VARIANT_BOOL Visible );
+    short GetLeft ( );
+    short GetTop ( );
+    short GetHeight ( );
+    short GetWidth ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Visible (
+        VARIANT_BOOL * Visible ) = 0;
+    virtual HRESULT __stdcall put_Visible (
+        VARIANT_BOOL Visible ) = 0;
+    virtual HRESULT __stdcall get_Left (
+        short * Left ) = 0;
+    virtual HRESULT __stdcall get_Top (
+        short * Top ) = 0;
+    virtual HRESULT __stdcall get_Height (
+        short * Height ) = 0;
+    virtual HRESULT __stdcall get_Width (
+        short * Width ) = 0;
+};
+
+struct __declspec(uuid("f5be8bd1-7de6-11d0-91fe-00c04fd701a5"))
+IAgentCtl : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCharacters))
+    IAgentCtlCharactersPtr Characters;
+    __declspec(property(get=GetAudioOutput))
+    IAgentCtlAudioObjectExPtr AudioOutput;
+    __declspec(property(get=GetSpeechInput))
+    IAgentCtlSpeechInputPtr SpeechInput;
+    __declspec(property(get=GetPropertySheet))
+    IAgentCtlPropertySheetPtr PropertySheet;
+    __declspec(property(get=GetConnected,put=PutConnected))
+    VARIANT_BOOL Connected;
+    __declspec(property(get=GetCommandsWindow))
+    IAgentCtlCommandsWindowPtr CommandsWindow;
+    __declspec(property(get=GetSuspended))
+    VARIANT_BOOL Suspended;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IAgentCtlCharactersPtr GetCharacters ( );
+    IAgentCtlAudioObjectExPtr GetAudioOutput ( );
+    IAgentCtlSpeechInputPtr GetSpeechInput ( );
+    IAgentCtlPropertySheetPtr GetPropertySheet ( );
+    IAgentCtlCommandsWindowPtr GetCommandsWindow ( );
+    VARIANT_BOOL GetConnected ( );
+    void PutConnected (
+        VARIANT_BOOL Connected );
+    VARIANT_BOOL GetSuspended ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Characters (
+        struct IAgentCtlCharacters * * Characters ) = 0;
+    virtual HRESULT __stdcall get_AudioOutput (
+        struct IAgentCtlAudioObjectEx * * AudioOutput ) = 0;
+    virtual HRESULT __stdcall get_SpeechInput (
+        struct IAgentCtlSpeechInput * * SpeechInput ) = 0;
+    virtual HRESULT __stdcall get_PropertySheet (
+        struct IAgentCtlPropertySheet * * PropSheet ) = 0;
+    virtual HRESULT __stdcall get_CommandsWindow (
+        struct IAgentCtlCommandsWindow * * CommandsWindow ) = 0;
+    virtual HRESULT __stdcall get_Connected (
+        VARIANT_BOOL * Connected ) = 0;
+    virtual HRESULT __stdcall put_Connected (
+        VARIANT_BOOL Connected ) = 0;
+    virtual HRESULT __stdcall get_Suspended (
+        VARIANT_BOOL * Suspended ) = 0;
+};
+
+struct __declspec(uuid("8563ff20-8ecc-11d1-b9b4-00c04fd97575"))
+IAgentCtlEx : IAgentCtl
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetRaiseRequestErrors,put=PutRaiseRequestErrors))
+    VARIANT_BOOL RaiseRequestErrors;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ShowDefaultCharacterProperties (
+        const _variant_t & x = vtMissing,
+        const _variant_t & y = vtMissing );
+    VARIANT_BOOL GetRaiseRequestErrors ( );
+    void PutRaiseRequestErrors (
+        VARIANT_BOOL RaiseErrors );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_ShowDefaultCharacterProperties (
+        VARIANT x = vtMissing,
+        VARIANT y = vtMissing ) = 0;
+    virtual HRESULT __stdcall get_RaiseRequestErrors (
+        VARIANT_BOOL * RaiseErrors ) = 0;
+    virtual HRESULT __stdcall put_RaiseRequestErrors (
+        VARIANT_BOOL RaiseErrors ) = 0;
+};
+
+struct __declspec(uuid("f5be8bd4-7de6-11d0-91fe-00c04fd701a5"))
+_AgentEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT ActivateInput (
+        _bstr_t CharacterID );
+    HRESULT DeactivateInput (
+        _bstr_t CharacterID );
+    HRESULT Click (
+        _bstr_t CharacterID,
+        short Button,
+        short Shift,
+        short x,
+        short y );
+    HRESULT DblClick (
+        _bstr_t CharacterID,
+        short Button,
+        short Shift,
+        short x,
+        short y );
+    HRESULT DragStart (
+        _bstr_t CharacterID,
+        short Button,
+        short Shift,
+        short x,
+        short y );
+    HRESULT DragComplete (
+        _bstr_t CharacterID,
+        short Button,
+        short Shift,
+        short x,
+        short y );
+    HRESULT Show (
+        _bstr_t CharacterID,
+        short Cause );
+    HRESULT Hide (
+        _bstr_t CharacterID,
+        short Cause );
+    HRESULT RequestStart (
+        IDispatch * Request );
+    HRESULT RequestComplete (
+        IDispatch * Request );
+    HRESULT Restart ( );
+    HRESULT Shutdown ( );
+    HRESULT Bookmark (
+        long BookmarkID );
+    HRESULT Command (
+        IDispatch * UserInput );
+    HRESULT IdleStart (
+        _bstr_t CharacterID );
+    HRESULT IdleComplete (
+        _bstr_t CharacterID );
+    HRESULT Move (
+        _bstr_t CharacterID,
+        short x,
+        short y,
+        short Cause );
+    HRESULT Size (
+        _bstr_t CharacterID,
+        short Width,
+        short Height );
+    HRESULT BalloonShow (
+        _bstr_t CharacterID );
+    HRESULT BalloonHide (
+        _bstr_t CharacterID );
+    HRESULT HelpComplete (
+        _bstr_t CharacterID,
+        _bstr_t Name,
+        short Cause );
+    HRESULT ListenStart (
+        _bstr_t CharacterID );
+    HRESULT ListenComplete (
+        _bstr_t CharacterID,
+        short Cause );
+    HRESULT DefaultCharacterChange (
+        _bstr_t GUID );
+    HRESULT AgentPropertyChange ( );
+    HRESULT ActiveClientChange (
+        _bstr_t CharacterID,
+        VARIANT_BOOL Active );
+};
+
+struct __declspec(uuid("d45fd31b-5c6e-11d1-9ec1-00c04fd7081f"))
+Agent;
+    // [ default ] interface IAgentCtlEx
+    // [ default, source ] dispinterface _AgentEvents
+
+//
+// Wrapper method implementations
+//
+
+#include "agentctl.tli"
+
+} // namespace AgentObjects
+
+#pragma pack(pop)
